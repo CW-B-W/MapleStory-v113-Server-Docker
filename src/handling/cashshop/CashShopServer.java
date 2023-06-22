@@ -48,7 +48,7 @@ public class CashShopServer {
             init = new ServerConnection(PORT,1,-10);//could code world here to seperate them
             init.run();
             players = new PlayerStorage(-10);
-            //playersMTS = new PlayerStorage(-20);
+            playersMTS = new PlayerStorage(-20);
             System.out.println("Shop    1: Listening on port " + PORT);
         } catch (final Exception e) {
             System.err.println("Binding to port " + PORT + " failed");
