@@ -5,3 +5,4 @@ wz/
 mysql/
 Logs/
 !Logs/LogIPs.txt
+logs/
