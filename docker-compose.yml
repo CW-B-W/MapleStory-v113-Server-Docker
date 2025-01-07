@@ -1,0 +1,51 @@
+version: "3"
+
+name: tms
+
+services:
+  tms113:
+    build: .
+    networks:
+      tms_network:
+        ipv4_address: 172.22.0.2
+    volumes:
+      - ./Settings.ini:/app/Settings.ini
+      - ./wz:/app/wz
+      - ./Libs:/app/Libs
+      - ./Logs:/app/Logs
+      - ./init_db:/app/init_db
+      - ./start_tms_server.sh:/app/start_tms_server.sh
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+        - 8484:8484
+        - 8585:8585
+        - 8586:8586
+        - 8587:8587
+
+  mysql:
+    image: mariadb:10.5 # Use MariaDB 10.5 to support native MySQL authentication
+    environment:
+      MARIADB_ROOT_PASSWORD: maplestory
+    networks:
+      tms_network:
+        ipv4_address: 172.22.0.3
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./mysql_conf:/etc/mysql/conf.d
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "root", "-pmaplestory"]
+      interval: 10s
+      timeout: 2s
+      retries: 10
+    ports:
+      - 3306:3306
+
+networks:
+  tms_network:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 172.22.0.1/16
+         gateway: 172.22.0.1

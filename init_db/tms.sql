@@ -32031,7 +32031,7 @@ CREATE TABLE `playernpcs` (
   `gender` tinyint(1) NOT NULL DEFAULT '0',
   `pets` varchar(25) DEFAULT '0,0,0',
   PRIMARY KEY (`id`),
-  KEY `scriptid` (`scriptid`),
+  UNIQUE KEY `scriptid` (`scriptid`),
   KEY `playernpcs_ibfk_1` (`charid`),
   CONSTRAINT `playernpcs_ibfk_1` FOREIGN KEY (`charid`) REFERENCES `characters` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=big5;
