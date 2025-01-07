@@ -24,6 +24,8 @@ EXPOSE 8484
 EXPOSE 8585
 EXPOSE 8586
 EXPOSE 8587
+# CashShop is on 8596
+EXPOSE 8596
 
 # start_tms_server.sh will be later replaced by mounted file
 COPY start_tms_server.sh /app/start_tms_server.sh

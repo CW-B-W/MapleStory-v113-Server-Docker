@@ -23,6 +23,7 @@ services:
         - 8585:8585
         - 8586:8586
         - 8587:8587
+        - 8596:8596
 
   mysql:
     image: mariadb:10.5 # Use MariaDB 10.5 to support native MySQL authentication
