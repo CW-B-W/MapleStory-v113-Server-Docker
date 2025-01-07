@@ -11,7 +11,7 @@ if [ "$?" = "1" ]
 then
     echo "Initializing TMS database..."
     mysql -h mysql -u root -pmaplestory -e "create database MapleStory"
-    mysql -h mysql -u root -pmaplestory MapleStory < /app/init_db/tms.sql
+    mysql -h mysql -u root -pmaplestory MapleStory < /app/init_db/maplestory.sql
 fi
 
 echo "Starting TMS server..."
