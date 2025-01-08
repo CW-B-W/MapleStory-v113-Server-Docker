@@ -6,8 +6,7 @@ services:
   tms113:
     build: .
     networks:
-      tms_network:
-        ipv4_address: 172.22.0.2
+      - tms_network
     volumes:
       - ./Settings.ini:/app/Settings.ini
       - ./wz:/app/wz
@@ -30,8 +29,7 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: maplestory
     networks:
-      tms_network:
-        ipv4_address: 172.22.0.3
+      - tms_network
     volumes:
       - ./mysql:/var/lib/mysql
       - ./mysql_conf:/etc/mysql/conf.d
@@ -46,7 +44,3 @@ services:
 networks:
   tms_network:
     driver: bridge
-    ipam:
-     config:
-       - subnet: 172.22.0.0/16
-         gateway: 172.22.0.1
