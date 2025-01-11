@@ -14,13 +14,13 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendSimple("#e<Notice>#n \r\nAnyone with the temerity to challange the Mu Lung Training Tower shall visit the Tower immediately. - ªZ¤½ - \r\n#b#L0#Challange the Mu Lung Training Tower#l\r\n#b#L1#Read the notice in detail.#l")
+	cm.sendSimple("#e<Notice>#n \r\nAnyone with the temerity to challange the Mu Lung Training Tower shall visit the Tower immediately. - æ­¦å…¬ - \r\n#b#L0#Challange the Mu Lung Training Tower#l\r\n#b#L1#Read the notice in detail.#l")
     } else if (status == 1) {
 	sel = selection;
 	if (sel == 1) {
 	    cm.sendNext("#e< Notice : Challange issued! >#n\r\nThis is Mu Gong, the rightful owner of Mu Lung Training Tower. A long time ago, I came to Mu Lung hoping to become a master, and now I have reached the point where I know I have reached the point where I know all Martial Arts. The owner of Mu Lung Training Tower was a weak individual who detested combat. That is why from here onwards, I'll be taking over the Mu Lung Training Tower.\r\nMu Lung Training Tower should be rightfully owned by the strongest individual in Mu Lung.\r\nIf you wish to learn from the very best, then take on the challange! I do not care if you wish to directly face me as well. I'll make sure to imprint greatness in every part of your body.");
 	} else {
-	    cm.sendYesNo("#b(ºN¦b¥¬§iÄæ¤W¡A·P¨ü¨ì¤@ªÑ¯«¯¦ªº®ğ®§³òÂ¶¦b¨­®Ç¡C)#k\r\n\r\nWould you like to be transfered to Mulung Training Tower?");
+	    cm.sendYesNo("#b(æ‘¸åœ¨å¸ƒå‘Šæ¬„ä¸Šï¼Œæ„Ÿå—åˆ°ä¸€è‚¡ç¥ç¥•çš„æ°£æ¯åœç¹åœ¨èº«æ—ã€‚)#k\r\n\r\nWould you like to be transfered to Mulung Training Tower?");
 	}
     } else if (status == 2) {
 	if (sel == 1) {

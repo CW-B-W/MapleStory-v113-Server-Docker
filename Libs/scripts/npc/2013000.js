@@ -25,9 +25,9 @@ function action(mode, type, selection) {
 		cm.removeAll(i); //holy
 	}
 	if (cm.getParty() == null) { // No Party
-	    cm.sendSimple("How about you and your party members collectively beating a quest? Here you'll find obstacles and problems where you won't be able to beat it unless with great teamwork. If you want to try it, please tell the #bleader of your party#k to talk to me.\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#§Ú­n¥Î40­Ó¤k¯«ªº¦ÐÁl§I´«¤k¯«¤âÅN#l");
+	    cm.sendSimple("How about you and your party members collectively beating a quest? Here you'll find obstacles and problems where you won't be able to beat it unless with great teamwork. If you want to try it, please tell the #bleader of your party#k to talk to me.\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#Ð¸ï¿½nãƒŽ40ï¿½å©´kï¿½ï¿½ï¿½å®³è¾›lï¿½Iä¼ ï¿½kï¿½ï¿½ã‚‚ï¿½N#l");
 	} else if (!cm.isLeader()) { // Not Party Leader
-	    cm.sendSimple("If you want to try the quest, please tell the #bleader of your party#k to talk to me.#b\r\n#L0#§Ú­n¥Î40­Ó¤k¯«ªº¦ÐÁl§I´«¤k¯«¤âÅN#l");
+	    cm.sendSimple("If you want to try the quest, please tell the #bleader of your party#k to talk to me.#b\r\n#L0#Ð¸ï¿½nãƒŽ40ï¿½å©´kï¿½ï¿½ï¿½å®³è¾›lï¿½Iä¼ ï¿½kï¿½ï¿½ã‚‚ï¿½N#l");
 	} else {
 	    // Check if all party members are within PQ levels
 	    var party = cm.getParty().getMembers();
@@ -54,7 +54,7 @@ function action(mode, type, selection) {
 	    if (next) {
 		var em = cm.getEventManager("OrbisPQ");
 		if (em == null) {
-		    cm.sendSimple("The PQ has encountered an error. Please report this on the forums, with a screenshot.#b\r\n#L0#§Ú­n¥Î40­Ó¤k¯«ªº¦ÐÁl§I´«¤k¯«¤âÅN#l");
+		    cm.sendSimple("The PQ has encountered an error. Please report this on the forums, with a screenshot.#b\r\n#L0#Ð¸ï¿½nãƒŽ40ï¿½å©´kï¿½ï¿½ï¿½å®³è¾›lï¿½Iä¼ ï¿½kï¿½ï¿½ã‚‚ï¿½N#l");
 		} else {
 		    var prop = em.getProperty("state");
 		    if (prop.equals("0") || prop == null) {
@@ -62,11 +62,11 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 		    } else {
-			cm.sendSimple("Another party has already entered the #rParty Quest#k in this channel. Please try another channel, or wait for the current party to finish.#b\r\n#L0#§Ú­n¥Î40­Ó¤k¯«ªº¦ÐÁl§I´«¤k¯«¤âÅN#l");
+			cm.sendSimple("Another party has already entered the #rParty Quest#k in this channel. Please try another channel, or wait for the current party to finish.#b\r\n#L0#Ð¸ï¿½nãƒŽ40ï¿½å©´kï¿½ï¿½ï¿½å®³è¾›lï¿½Iä¼ ï¿½kï¿½ï¿½ã‚‚ï¿½N#l");
 		    }
 		}
 	    } else {
-		cm.sendSimple("Your party is invalid. Please adhere to the following requirements:\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#§Ú­n¥Î40­Ó¤k¯«ªº¦ÐÁl§I´«¤k¯«¤âÅN#l");
+		cm.sendSimple("Your party is invalid. Please adhere to the following requirements:\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#Ð¸ï¿½nãƒŽ40ï¿½å©´kï¿½ï¿½ï¿½å®³è¾›lï¿½Iä¼ ï¿½kï¿½ï¿½ã‚‚ï¿½N#l");
 	    }
 	}
     } else { //broken glass

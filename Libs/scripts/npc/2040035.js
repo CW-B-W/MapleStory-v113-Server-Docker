@@ -105,7 +105,7 @@ function action(mode,type,selection) {
     else
         status --;
     if (status == 0) {
-        cm.sendNext("½Ğ½T»{§Aªº¹D¨ãÄæ¦³¨S¦³º¡,º¡¤F»â¤£¨ìªF¦è³á");
+        cm.sendNext("è«‹ç¢ºèªä½ çš„é“å…·æ¬„æœ‰æ²’æœ‰æ»¿,æ»¿äº†é ˜ä¸åˆ°æ±è¥¿å–”");
     } else if (status == 1) {
 	cm.removeAll(4001022);
 	cm.removeAll(4001023);

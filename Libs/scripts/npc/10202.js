@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendNext("¦pªG§A·QÅéÅç¼C¤hªº·PÄ±¡A¦A¨Ó¸ò§Ú¹ï¸Ü¡C");
+	    cm.sendNext("å¦‚æœä½ æƒ³é«”é©—åŠå£«çš„æ„Ÿè¦ºï¼Œå†ä¾†è·Ÿæˆ‘å°è©±ã€‚");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("¼C¤h¾Ö¦³¤@­Ó±j¤jªº¤O¶q»P¦å¶q¡A¥L­Ì¨É¨ü³Ì¥ú©ú¥¿¤jªº¾Ô°«¡C¦Ó¥B¡A¨Ã°t³Æ¤F½ÆÂøªº§Ş¯à¡A³o­ÓÂ¾·~¾Ö¦³±j¤jªº§ğÀ»¤O¡C");
+	cm.sendNext("åŠå£«æ“æœ‰ä¸€å€‹å¼·å¤§çš„åŠ›é‡èˆ‡è¡€é‡ï¼Œä»–å€‘äº«å—æœ€å…‰æ˜æ­£å¤§çš„æˆ°é¬¥ã€‚è€Œä¸”ï¼Œä¸¦é…å‚™äº†è¤‡é›œçš„æŠ€èƒ½ï¼Œé€™å€‹è·æ¥­æ“æœ‰å¼·å¤§çš„æ”»æ“ŠåŠ›ã€‚");
     } else if (status == 1) {
-	cm.sendYesNo("§A·QÅéÅç¤@¤U¼C¤h¬İ¬İ¶Ü¡H");
+	cm.sendYesNo("ä½ æƒ³é«”é©—ä¸€ä¸‹åŠå£«çœ‹çœ‹å—ï¼Ÿ");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020100, 0); // Effect/Direction3.img/swordman/Scene00

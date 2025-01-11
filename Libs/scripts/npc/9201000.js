@@ -16,14 +16,14 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 	if (cm.getPlayer().getMarriageId() > 0) {
-	    cm.sendNext("§A¤w¸gµ²±B¤F¡A¤£»İ­n¦A»s§@§Ù«ü!");
+	    cm.sendNext("ä½ å·²ç¶“çµå©šäº†ï¼Œä¸éœ€è¦å†è£½ä½œæˆ’æŒ‡!");
 	    cm.dispose();
 	} else {
-	    cm.sendSimple("§A¦n¡A§Ú¥i¥HÀ°§U§A¬Æ»ò?\r\n#b#L0#»s§@¤ë¥ú§Ù«ü#l\r\n#L1#»s§@¬P¥ú§Ù«ü#l\r\n#L2#»s§@ª÷¤ß§Ù«ü#l\r\n#L3#»s§@»ÈÆp§Ù«ü#l#k");
+	    cm.sendSimple("ä½ å¥½ï¼Œæˆ‘å¯ä»¥å¹«åŠ©ä½ ç”šéº¼?\r\n#b#L0#è£½ä½œæœˆå…‰æˆ’æŒ‡#l\r\n#L1#è£½ä½œæ˜Ÿå…‰æˆ’æŒ‡#l\r\n#L2#è£½ä½œé‡‘å¿ƒæˆ’æŒ‡#l\r\n#L3#è£½ä½œéŠ€é‘½æˆ’æŒ‡#l#k");
 	}
     } else if (status == 1) {
 	firstSelection = selection;
-	cm.sendSimple("§Úª¾¹D¤F¡A§A­n¬Æ»ò¤Ø¤o?\r\n#b#L0#1 §J©Ô#l\r\n#L1#2 §J©Ô#l\r\n#L2#3 §J©Ô#l#k");
+	cm.sendSimple("æˆ‘çŸ¥é“äº†ï¼Œä½ è¦ç”šéº¼å°ºå¯¸?\r\n#b#L0#1 å…‹æ‹‰#l\r\n#L1#2 å…‹æ‹‰#l\r\n#L2#3 å…‹æ‹‰#l#k");
     } else if (status == 2) {
 	secondSelection = selection;
 	var prompt = "In that case, I'm going to need specific items from you in order to make it. Make sure you have room in your inventory, though!#b";

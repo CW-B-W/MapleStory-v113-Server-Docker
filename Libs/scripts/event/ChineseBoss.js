@@ -35,7 +35,7 @@ function playerEntry(eim, player) {
 function scheduledTimeout(eim,player) {
     eim.unregisterPlayer(player);
 
-	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "®É¶¡¤º¨S¦³ÅX³v¸¼°G¤ı¡A¥¢±Ñ¡I"));
+	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "æ™‚é–“å…§æ²’æœ‰é©…é€èœˆèš£ç‹ï¼Œå¤±æ•—ï¼"));
     var map = eim.getMapFactory().getMap(701010300);
     player.changeMap(map, map.getPortal(0));
     if (eim.disposeIfPlayerBelow(0, 0)) {

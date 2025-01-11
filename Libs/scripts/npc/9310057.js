@@ -25,7 +25,7 @@ function action(mode, type, selection) {
     switch(cm.getPlayer().getMapId()) {
 	case 702090400:
     	    if (status == 0) {
-	        cm.sendSimple("Hello~I am Dr.P of #bEnglish School!\r\n\r\n#L0#Go to English School - Easy#l\r\n#L1#Go to English School - Medium#l\r\n#L2#Go to English School - Hard#l\r\n#L3#§I´«¼ú«~#l\r\n#L4#Return to Event Map#l");
+	        cm.sendSimple("Hello~I am Dr.P of #bEnglish School!\r\n\r\n#L0#Go to English School - Easy#l\r\n#L1#Go to English School - Medium#l\r\n#L2#Go to English School - Hard#l\r\n#L3#å…Œæ›çå“#l\r\n#L4#Return to Event Map#l");
     	    } else if (status == 1) {
 				if (selection == 0 || selection == 1 || selection == 2) {
 				var em = cm.getEventManager("English");
@@ -64,9 +64,9 @@ function action(mode, type, selection) {
 				cm.dispose();
 			} else if (selection == 3 ){
 				if(cm.haveItem(4001137,15)){
-					cm.sendYesNo("§A¦³¨ÄÄ_Ä_¦L³¹15­Óªü!§A·Q­n¥æ´«¼ú«~¶Ü¡H");
+					cm.sendYesNo("ä½ æœ‰ä¹–å¯¶å¯¶å°ç« 15å€‹é˜¿!ä½ æƒ³è¦äº¤æ›çå“å—ï¼Ÿ");
 				}else{
-					cm.sendOk("¦³¨ÄÄ_Ä_¦L³¹15­Ó´N¥i¥H©M§Ú´«¼ú«~³á!");
+					cm.sendOk("æœ‰ä¹–å¯¶å¯¶å°ç« 15å€‹å°±å¯ä»¥å’Œæˆ‘æ›çå“å–”!");
 				}
 
 			} else if (selection == 4) {
@@ -85,7 +85,7 @@ function action(mode, type, selection) {
 	    break;
 	default:
 		if (status == 0) {
-	        cm.sendYesNo("§A¦n~§Ú¬OÛ£Û£³Õ¤h!§Ú¬O­^¤å§øªº§øªø~¦³Å²©ó¥ş²y¤Æ®É¥N,­^¤å¬O¤@ªùÁ×§K¤£¤Fªº¾Ç°İ~§A·Q­n§ó¥[ºë¶i§Aªº­^¤å¯à¤O¶Ü?");
+	        cm.sendYesNo("ä½ å¥½~æˆ‘æ˜¯è‡è‡åšå£«!æˆ‘æ˜¯è‹±æ–‡æ‘çš„æ‘é•·~æœ‰é‘‘æ–¼å…¨çƒåŒ–æ™‚ä»£,è‹±æ–‡æ˜¯ä¸€é–€é¿å…ä¸äº†çš„å­¸å•~ä½ æƒ³è¦æ›´åŠ ç²¾é€²ä½ çš„è‹±æ–‡èƒ½åŠ›å—?");
     	    } else if (status == 1) {
 				cm.saveLocation("EVENT");
 				cm.warp(702090400,0); //exit map lobby

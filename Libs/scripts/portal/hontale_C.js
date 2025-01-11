@@ -18,7 +18,7 @@ function enter(pi) {
         }
         return true;
     } else {
-        pi.playerMessage(6, "§A¤£¬O¶¤ªø¡A¥u¦³¶¤ªø¥i¥H³q¹L³o­Ó¶Ç°eÂI");
+        pi.playerMessage(6, "ä½ ä¸æ˜¯éšŠé•·ï¼Œåªæœ‰éšŠé•·å¯ä»¥é€šéé€™å€‹å‚³é€é»");
         return false;
     }
 }

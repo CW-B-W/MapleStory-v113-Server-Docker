@@ -42,7 +42,7 @@ var minLevel = 50;
 
 function start() {
 	if(cm.haveItem(4001109)){
-		cm.sendNext("¦³±j¤Æªº¬Á¼þ²~¶Ü...¨º»ò§A¯à°÷¶i¥h");
+		cm.sendNext("æœ‰å¼·åŒ–çš„çŽ»ç’ƒç“¶å—Ž...é‚£éº¼ä½ èƒ½å¤ é€²åŽ»");
 		teethmode = 3;
 	}else if (cm.getPlayer().getLevel() >= minLevel) {
         if (cm.isQuestFinished(100200) && !cm.isQuestActive(100200)) {

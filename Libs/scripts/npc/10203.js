@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendNext("¦pªG§A·QÅéÅçµs¸éªº·PÄ±¡A¦A¨Ó¸ò§Ú¹ï¸Ü¡C");
+	    cm.sendNext("å¦‚æœä½ æƒ³é«”é©—ç›œè³Šçš„æ„Ÿè¦ºï¼Œå†ä¾†è·Ÿæˆ‘å°è©±ã€‚");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("µs¸é¬O¹B®ğ©MÆF±Ó©M¤O¶qªº§¹¬üµ²¦X¡A¥¦­Ìµ½©ó¹ïµL©`ªº¼Ä¤H¶i¦æ¬ğÅ§¡C·¥°ªªº°jÁ×²v©M³t«×¤¹³\µs¸é¥Î¦UºØ¨¤«×§ğÀ»¼Ä¤H¡C");
+	cm.sendNext("ç›œè³Šæ˜¯é‹æ°£å’Œéˆæ•å’ŒåŠ›é‡çš„å®Œç¾çµåˆï¼Œå®ƒå€‘å–„æ–¼å°ç„¡å¥ˆçš„æ•µäººé€²è¡Œçªè¥²ã€‚æ¥µé«˜çš„è¿´é¿ç‡å’Œé€Ÿåº¦å…è¨±ç›œè³Šç”¨å„ç¨®è§’åº¦æ”»æ“Šæ•µäººã€‚");
     } else if (status == 1) {
-	cm.sendYesNo("§A·QÅéÅç¤@¤Uµs¸é¬İ¬İ¶Ü¡H");
+	cm.sendYesNo("ä½ æƒ³é«”é©—ä¸€ä¸‹ç›œè³Šçœ‹çœ‹å—ï¼Ÿ");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020400, 0); // Effect/Direction3.img/rouge/Scene00

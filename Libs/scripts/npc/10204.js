@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendNext("¦pªG§A·QÅéÅç®üµsªº·PÄ±¡A¦A¨Ó¸ò§Ú¹ï¸Ü¡C");
+	    cm.sendNext("å¦‚æœä½ æƒ³é«”é©—æµ·ç›œçš„æ„Ÿè¦ºï¼Œå†ä¾†è·Ÿæˆ‘å°è©±ã€‚");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("®üµs¾Ö¦³³Ç¥XªºÆF¥©©M¤O¶q¡A§Q¥Î¥L­Ìªººj¦b»·¶ZÂ÷§ğÀ»¡A¦P®É¦bªñ¾Ô¾Ô°«±¡ªp¤U¨Ï¥Î¥L­Ìªº¤O¶q¡C");
+	cm.sendNext("æµ·ç›œæ“æœ‰å‚‘å‡ºçš„éˆå·§å’ŒåŠ›é‡ï¼Œåˆ©ç”¨ä»–å€‘çš„æ§åœ¨é è·é›¢æ”»æ“Šï¼ŒåŒæ™‚åœ¨è¿‘æˆ°æˆ°é¬¥æƒ…æ³ä¸‹ä½¿ç”¨ä»–å€‘çš„åŠ›é‡ã€‚");
     } else if (status == 1) {
-	cm.sendYesNo("§A·QÅéÅç¤@¤U®üµsªº·PÄ±¶Ü¡H");
+	cm.sendYesNo("ä½ æƒ³é«”é©—ä¸€ä¸‹æµ·ç›œçš„æ„Ÿè¦ºå—ï¼Ÿ");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020500, 0); // Effect/Direction3.img/pirate/Scene00

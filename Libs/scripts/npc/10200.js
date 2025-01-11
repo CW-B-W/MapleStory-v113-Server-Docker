@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	cm.sendNext("¦pªG§A·QÅéÅç¤}½b¤âªº·PÄ±¡A¦A¨Ó¸ò§Ú¹ï¸Ü¡C");
+	cm.sendNext("å¦‚æœä½ æƒ³é«”é©—å¼“ç®­æ‰‹çš„æ„Ÿè¦ºï¼Œå†ä¾†è·Ÿæˆ‘å°è©±ã€‚");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("¤}½b¤â¦³ÆF±Ó»P¤O¶qªº¤ä´©¡A¥D­n­t³dªø³~§ğÀ»¡A¬°«e½uªº¾Ô°«ªÌ´£¨Ñ¤ä´©¡C«D±`¾Õªø¨Ï¥Î¤}¡A§@¬°§ğÀ»ªº¤@³¡¤À¡C");
+	cm.sendNext("å¼“ç®­æ‰‹æœ‰éˆæ•èˆ‡åŠ›é‡çš„æ”¯æ´ï¼Œä¸»è¦è² è²¬é•·é€”æ”»æ“Šï¼Œç‚ºå‰ç·šçš„æˆ°é¬¥è€…æä¾›æ”¯æ´ã€‚éå¸¸æ“…é•·ä½¿ç”¨å¼“ï¼Œä½œç‚ºæ”»æ“Šçš„ä¸€éƒ¨åˆ†ã€‚");
     } else if (status == 1) {
-	cm.sendYesNo("§A·QÅéÅç¤@¤U¤}½b¤âªº·PÄ±¶Ü¡H");
+	cm.sendYesNo("ä½ æƒ³é«”é©—ä¸€ä¸‹å¼“ç®­æ‰‹çš„æ„Ÿè¦ºå—ï¼Ÿ");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020300, 0); // Effect/Direction3.img/archer/Scene00

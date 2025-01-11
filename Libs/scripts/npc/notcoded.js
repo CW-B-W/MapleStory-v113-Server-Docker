@@ -2,7 +2,7 @@ function action(mode, type, selection) {
 	if (cm.getNpc() >= 9901000) {
 		cm.sendNext("Hello #h0#, I am in the Hall of Fame for reaching LEVEL 200.");
 	} else {
-		cm.sendNext("§Ú¥Ø«e¨S¦³¥\¯à¡A¥i¥H¦^³øµ¹ºŞ²z¤H­û¡A\r\n¥N¸¹¬°#r"+ cm.getNpc() + "#k");
+		cm.sendNext("æˆ‘ç›®å‰æ²’æœ‰åŠŸèƒ½ï¼Œå¯ä»¥å›å ±çµ¦ç®¡ç†äººå“¡ï¼Œ\r\nä»£è™Ÿç‚º#r"+ cm.getNpc() + "#k");
 	}
 	cm.safeDispose();
 }

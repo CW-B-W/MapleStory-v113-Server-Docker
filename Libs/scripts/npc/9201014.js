@@ -8,17 +8,17 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	    cm.sendSimple("¶·­n¬Æ»òÀ°§U¶Ü?\r\n#b#L0#§Ú·QÂ÷±B#l\r\n#L1#§Ú·Q§R°£§Úªºµ²±B§Ù«ü.#l#k");
+	    cm.sendSimple("é ˆè¦ç”šéº¼å¹«åŠ©å—?\r\n#b#L0#æˆ‘æƒ³é›¢å©š#l\r\n#L1#æˆ‘æƒ³åˆªé™¤æˆ‘çš„çµå©šæˆ’æŒ‡.#l#k");
     } else if (status == 1) {
 		if (selection == 0) {
 			if(cm.getPlayer().getMarriageId() > 0){
-				cm.sendYesNo("§A½T©w¶Ü!?¤@¥¹¨M©w¤F´NµLªk®¾¦^¤F");
+				cm.sendYesNo("ä½ ç¢ºå®šå—!?ä¸€æ—¦æ±ºå®šäº†å°±ç„¡æ³•æŒ½å›äº†");
 			}else{
-				cm.sendOk("§A¨S¦³µ²±B");
+				cm.sendOk("ä½ æ²’æœ‰çµå©š");
 				cm.dispose();
 			}
 		} else {
-			var selStr = "§A·Q­n²¾°£­ş­Ó§Ù«ü...";
+			var selStr = "ä½ æƒ³è¦ç§»é™¤å“ªå€‹æˆ’æŒ‡...";
 			var found = false;
 			for (var i = 1112300; i < 1112312; i++) {
 				if (cm.haveItem(i)) {
@@ -39,7 +39,7 @@ function action(mode, type, selection) {
 				}
 			}
 			if (!found) {
-				cm.sendOk("§A¨S¦³¥ô¦ó§Ù«ü.");
+				cm.sendOk("ä½ æ²’æœ‰ä»»ä½•æˆ’æŒ‡.");
 				cm.dispose();
 			} else {
 				cm.sendSimple(selStr);
@@ -49,24 +49,24 @@ function action(mode, type, selection) {
 		if (selection == -1) {
 			var cPlayer = cm.getClient().getChannelServer().getPlayerStorage().getCharacterById(cm.getPlayer().getMarriageId());
 			if (cPlayer == null) {
-				cm.sendNext("½Ğ½T»{§Aªº¦ñ«Q¦b½u¤W.");
+				cm.sendNext("è«‹ç¢ºèªä½ çš„ä¼´ä¾¶åœ¨ç·šä¸Š.");
 			} else {
-				cPlayer.dropMessage(1, "§A»P¦ñ«Q¤w¸gÂ÷±B.");
+				cPlayer.dropMessage(1, "ä½ èˆ‡ä¼´ä¾¶å·²ç¶“é›¢å©š.");
 				cPlayer.setMarriageId(0);
 				cm.setQuestRecord(cPlayer, 160001, "0");
 				cm.setQuestRecord(cm.getPlayer(), 160001, "0");
 				cm.setQuestRecord(cPlayer, 160002, "0");
 				cm.setQuestRecord(cm.getPlayer(), 160002, "0");
 				cm.getPlayer().setMarriageId(0);
-				cm.sendNext("§A­Ì¦¨¥\Â÷±B¤F...");
+				cm.sendNext("ä½ å€‘æˆåŠŸé›¢å©šäº†...");
 			}
 		} else {
 			if (selection >= 1112300 && selection < 1112312) {
 				cm.gainItem(selection, -1);
-				cm.sendOk("¤w¸g²¾°£§Aªº§Ù«ü.");
+				cm.sendOk("å·²ç¶“ç§»é™¤ä½ çš„æˆ’æŒ‡.");
 			} else if (selection >= 4210000 && selection < 4210012) {
 				cm.gainItem(selection, -1);
-				cm.sendOk("§Aªº­q±B§Ù«ü¤w¸g²¾°£.");
+				cm.sendOk("ä½ çš„è¨‚å©šæˆ’æŒ‡å·²ç¶“ç§»é™¤.");
 			}
 		}		
 		cm.dispose();

@@ -28,7 +28,7 @@ function setup(mapid) {
 function playerEntry(eim, player) {
     var map = eim.getMapInstance(0);
     player.changeMap(map, map.getPortal(0));
-	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "½Ğ¦b­­©w®É¶¡¤º¡AÁ×¶}Á¤»æ¤H¨ÃÂI¿UÄúÀë¡I"));
+	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "è«‹åœ¨é™å®šæ™‚é–“å…§ï¼Œé¿é–‹è–‘é¤…äººä¸¦é»ç‡ƒè Ÿç‡­ï¼"));
 	eim.startEventTimer(180000,player); 
 }
 
@@ -37,7 +37,7 @@ function playerEntry(eim, player) {
 function scheduledTimeout(eim,player) {
     eim.unregisterPlayer(player);
 
-	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "®É¶¡¨ì¡I"));
+	player.getClient().getSession().write(MaplePacketCreator.serverNotice(6, "æ™‚é–“åˆ°ï¼"));
     var map = eim.getMapFactory().getMap(749020920);
     player.changeMap(map, map.getPortal(0));
     if (eim.disposeIfPlayerBelow(0, 0)) {

@@ -30,7 +30,7 @@ function enter(pi) {
 	pi.updateInfoQuest(27017, new_quest);
 	pi.forceStartQuest(27018, number+1, true);
 	pi.getPlayer().dropMessage(-1, (number+1) +"/5 completed");
-	pi.getPlayer().dropMessage(-1, "ºÙ¸¹¦¨´N - µn®pªÌ");
-	pi.showQuestMsg("·í«eºÙ¸¹ - µn®pªÌ " + (number+1) + "/5 §¹¦¨");
+	pi.getPlayer().dropMessage(-1, "ç¨±è™Ÿæˆå°± - ç™»å³°è€…");
+	pi.showQuestMsg("ç•¶å‰ç¨±è™Ÿ - ç™»å³°è€… " + (number+1) + "/5 å®Œæˆ");
     }
 }

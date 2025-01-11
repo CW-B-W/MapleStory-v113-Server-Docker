@@ -10,7 +10,7 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendOk("Åwªï¨Ó¨ì·¬¤§¨¦!");
+	cm.sendOk("æ­¡è¿Žä¾†åˆ°æ¥“ä¹‹è°·!");
     }
 	cm.dispose();
 }

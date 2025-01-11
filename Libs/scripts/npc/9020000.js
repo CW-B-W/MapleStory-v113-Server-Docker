@@ -6,9 +6,9 @@ function start() {
     cm.removeAll(4001007);
     cm.removeAll(4001008);
     if (cm.getParty() == null) { // No Party
-	cm.sendOk("½Ğ²Õ¶¤¦A¨Ó§ä§Ú");
+	cm.sendOk("è«‹çµ„éšŠå†ä¾†æ‰¾æˆ‘");
     } else if (!cm.isLeader()) { // Not Party Leader
-	cm.sendOk("½Ğ¥s§Aªº¶¤ªø¨Ó§ä§Ú!");
+	cm.sendOk("è«‹å«ä½ çš„éšŠé•·ä¾†æ‰¾æˆ‘!");
     } else {
 	// Check if all party members are within Levels 21-30
 	var party = cm.getParty().getMembers();
@@ -47,7 +47,7 @@ function start() {
 		cm.removeAll(4001007);
 	    }
 	} else {
-	    cm.sendOk("§Aªº¶¤¥î»İ­n¥|­Ó¤H,µ¥¯Å¥²¶·¦b21-30¤§¶¡,½Ğ½T»{§Aªº¶¤¤Í¦³¨S¦³³£¦b³o¸Ì,©Î¬O¸Ì­±¤w¸g¦³¤H¤F!");
+	    cm.sendOk("ä½ çš„éšŠä¼éœ€è¦å››å€‹äºº,ç­‰ç´šå¿…é ˆåœ¨21-30ä¹‹é–“,è«‹ç¢ºèªä½ çš„éšŠå‹æœ‰æ²’æœ‰éƒ½åœ¨é€™è£¡,æˆ–æ˜¯è£¡é¢å·²ç¶“æœ‰äººäº†!");
 	}
     }
     cm.dispose();

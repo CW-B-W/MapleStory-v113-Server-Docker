@@ -23,6 +23,6 @@ function cancelSchedule() {
 
 function start() {
     scheduleNew();
-    var Message = new Array("¦pªG¦³¥ô¦ó¥d¦í¡BµLªk°Ê¼u¡A½Ğ¨Ï¥Î@EA","¹DÀ]¡BBOSSPQ¬Ò¯àÀò±oÂI¼Æ");
-    em.getChannelServer().broadcastPacket(MaplePacketCreator.yellowChat("[·¬¤§¨¦À°§U]" + Message[Math.floor(Math.random() * Message.length)]));
+    var Message = new Array("å¦‚æœæœ‰ä»»ä½•å¡ä½ã€ç„¡æ³•å‹•å½ˆï¼Œè«‹ä½¿ç”¨@EA","é“é¤¨ã€BOSSPQçš†èƒ½ç²å¾—é»æ•¸");
+    em.getChannelServer().broadcastPacket(MaplePacketCreator.yellowChat("[æ¥“ä¹‹è°·å¹«åŠ©]" + Message[Math.floor(Math.random() * Message.length)]));
 }

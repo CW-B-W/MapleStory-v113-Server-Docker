@@ -13,8 +13,8 @@
 var ticket = new Array(4031047, 4031074, 4031331, 4031576);
 var cost = new Array(5000, 6000, 30000, 6000);
 var tmsg = new Array(15, 10, 10, 10);
-var mapNames = new Array("Å]ªk´ËªL(©¹ºû¦h§Q¨È®q)", "ª±¨ã«°", "¯«¤ì§ø", "¯Ç§Æ¨Fºz");
-var mapName2 = new Array("Å]ªk´ËªL(©¹ºû¦h§Q¨È®q)", "ª±¨ã«°", "¯«¤ì§ø", "¯Ç§Æ¨Fºz");
+var mapNames = new Array("é­”æ³•æ£®æ—(å¾€ç¶­å¤šåˆ©äºå³¶)", "ç©å…·åŸ", "ç¥æœ¨æ‘", "ç´å¸Œæ²™æ¼ ");
+var mapName2 = new Array("é­”æ³•æ£®æ—(å¾€ç¶­å¤šåˆ©äºå³¶)", "ç©å…·åŸ", "ç¥æœ¨æ‘", "ç´å¸Œæ²™æ¼ ");
 var select;
 
 function start() {
@@ -28,7 +28,7 @@ function action(mode, type, selection) {
 	return;
     }
     if(mode == 0) {
-	cm.sendNext("§A¥²¶·¦³¤@¨Ç¨Æ±¡¨Ó·ÓÅU¦o¡A¹ï§a¡H");
+	cm.sendNext("ä½ å¿…é ˆæœ‰ä¸€äº›äº‹æƒ…ä¾†ç…§é¡§å¥¹ï¼Œå°å§ï¼Ÿ");
 	cm.dispose();
 	return;
     }
@@ -36,17 +36,17 @@ function action(mode, type, selection) {
 	status++;
     }
     if(status == 0) {
-	var where = "Hi§A¦n¡A§Ú­t³d¬°¨C­Ó¥Øªº¦a¥X°â²î²¼¡C ±z·QÁÊ¶R³q©¹­ş¸Ìªº²¼©O¡H";
+	var where = "Hiä½ å¥½ï¼Œæˆ‘è² è²¬ç‚ºæ¯å€‹ç›®çš„åœ°å‡ºå”®èˆ¹ç¥¨ã€‚ æ‚¨æƒ³è³¼è²·é€šå¾€å“ªè£¡çš„ç¥¨å‘¢ï¼Ÿ";
 	for (var i = 0; i < ticket.length; i++) {
 	    where += "\r\n#L" + i + "##b" + mapNames[i] + "#k#l";
 	}
 	cm.sendSimple(where);
     } else if(status == 1) {
 	select = selection;
-	cm.sendYesNo("³q©¹ #b"+mapName2[select]+"¨C¯Z²î¬ù"+tmsg[select]+" ¤ÀÄÁ ¨C±i²¼»ù¬°"+cost[select]+" ·¬¹ô#k.§A½T©w­nÁÊ¶R#b#t"+ticket[select]+"##k?");
+	cm.sendYesNo("é€šå¾€ #b"+mapName2[select]+"æ¯ç­èˆ¹ç´„"+tmsg[select]+" åˆ†é˜ æ¯å¼µç¥¨åƒ¹ç‚º"+cost[select]+" æ¥“å¹£#k.ä½ ç¢ºå®šè¦è³¼è²·#b#t"+ticket[select]+"##k?");
     } else if(status == 2) {
 	if(cm.getMeso() < cost[select] || !cm.canHold(ticket[select])) {
-	    cm.sendOk("½Ğ½T»{§Aªºª÷¿ú¦³ #b"+cost[select]+" ·¬¹ô#k? ");
+	    cm.sendOk("è«‹ç¢ºèªä½ çš„é‡‘éŒ¢æœ‰ #b"+cost[select]+" æ¥“å¹£#k? ");
 	    cm.dispose();
 	} else {
 	    cm.gainMeso(-cost[select]);

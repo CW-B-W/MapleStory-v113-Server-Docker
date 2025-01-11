@@ -19,11 +19,11 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendSimple("±z·Q°µ¤°»ò¡H\n\r #b#L0#¶i¤J³¨³½³õ#l \n\r #L2#ªğ¦^ÂÂ¦a¹Ï#l");
+	cm.sendSimple("æ‚¨æƒ³åšä»€éº¼ï¼Ÿ\n\r #b#L0#é€²å…¥é‡£é­šå ´#l \n\r #L2#è¿”å›èˆŠåœ°åœ–#l");
     } else if (status == 1) {
 	sel = selection;
 	if (sel == 0) {
-	    cm.sendSimple("­ş¤@­Ó¡H\r\n#b#L0#¬PªÅ³¨³½³õ#l\r\n#L1#¹Ú¤Û³¨³½³õ#l\r\n#L2#¬Ó®a¤Û¹Ò³¨³½³õ#l#k");
+	    cm.sendSimple("å“ªä¸€å€‹ï¼Ÿ\r\n#b#L0#æ˜Ÿç©ºé‡£é­šå ´#l\r\n#L1#å¤¢å¹»é‡£é­šå ´#l\r\n#L2#çš‡å®¶å¹»å¢ƒé‡£é­šå ´#l#k");
 	} else if (sel == 2) {
 	    var returnMap = cm.getSavedLocation("FISHING");
 	    if (returnMap < 0 || cm.getMap(returnMap) == null) {

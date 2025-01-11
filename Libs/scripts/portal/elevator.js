@@ -22,7 +22,7 @@
 function enter(pi) {
 	var elevator = pi.getEventManager("elevator");
 	if (elevator == null) {
-		pi.getPlayer().dropMessage(5, "¹q±è¦n¹³¬G»Ù¤F...");
+		pi.getPlayer().dropMessage(5, "é›»æ¢¯å¥½åƒæ•…éšœäº†...");
 		return false;
 	}
 	if (pi.getPlayer().getMapId() == 222020200 && elevator.getProperty("isDown").equals("false") ) {
@@ -32,7 +32,7 @@ function enter(pi) {
 		pi.warp(222020110 , "out00");
 		return true;
 	} else {
-		pi.getPlayer().dropMessage(5, "¹q±èªùÃöµÛ...");
+		pi.getPlayer().dropMessage(5, "é›»æ¢¯é–€é—œè‘—...");
 		return false;
 	}
 }

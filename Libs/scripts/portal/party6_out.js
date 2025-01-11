@@ -2,6 +2,6 @@ function enter(pi) {
 	if ((pi.getMap().getAllMonstersThreadsafe().size() == 0 || pi.getMap().getMonsterById(9300183) != null) && (pi.getMap().getReactorByName("") == null || pi.getMap().getReactorByName("").getState() == 1)) {
 		pi.warp(930000700,0);
 	} else {
-		pi.playerMessage(5, "½Ğ¥´§¹BOSS¦A¥X¥h");
+		pi.playerMessage(5, "è«‹æ‰“å®ŒBOSSå†å‡ºå»");
 	}
 }

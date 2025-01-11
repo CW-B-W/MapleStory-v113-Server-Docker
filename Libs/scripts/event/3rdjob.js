@@ -91,7 +91,7 @@ function allMonstersDead(eim) {
     map.spawnItemDrop(winner, winner, price, winner.getPosition(), true, false);
 //    eim.schedule("warpOut", 120000);
     var mob = em.getMonster(monsterId);
-    em.getChannelServer().broadcastPacket(MaplePacketCreator.serverNotice(6, "[¨Æ¥ó] " + winner.getName() + " ¥´±Ñ¤F " + mob.getStats().getName() + "!"));
+    em.getChannelServer().broadcastPacket(MaplePacketCreator.serverNotice(6, "[äº‹ä»¶] " + winner.getName() + " æ‰“æ•—äº† " + mob.getStats().getName() + "!"));
 }
 
 function cancelSchedule() {

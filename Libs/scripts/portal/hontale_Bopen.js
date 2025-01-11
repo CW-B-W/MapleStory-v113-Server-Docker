@@ -32,7 +32,7 @@ function enter(pi) {
         var avail = eim.getProperty("2stageclear");
         if (avail == null) {
             // do nothing; send message to player
-            pi.getPlayer().dropMessage(6, "¶Ç°eªùÃö³¬.");
+            pi.getPlayer().dropMessage(6, "å‚³é€é–€é—œé–‰.");
             return false;
         }else {
             pi.getPlayer().changeMap(target, targetPortal);
@@ -48,7 +48,7 @@ function enter(pi) {
         var avail = eim.getProperty("3stageclear");
         if (avail == null) {
             // do nothing; send message to player
-            pi.getPlayer().dropMessage(6, "¶Ç°eªùÃö³¬.");
+            pi.getPlayer().dropMessage(6, "å‚³é€é–€é—œé–‰.");
             return false;
         }else {
             pi.getPlayer().changeMap(target, targetPortal);
@@ -64,7 +64,7 @@ function enter(pi) {
         var avail = eim.getProperty("4stageclear");
         if (avail == null) {
             // do nothing; send message to player
-            pi.getPlayer().dropMessage(6, "¶Ç°eªùÃö³¬.");
+            pi.getPlayer().dropMessage(6, "å‚³é€é–€é—œé–‰.");
             return false;
         }else {
             pi.getPlayer().changeMap(target, targetPortal);
@@ -80,7 +80,7 @@ function enter(pi) {
         var avail = eim.getProperty("5stageclear");
         if (avail == null) {
             // do nothing; send message to player
-            pi.getPlayer().dropMessage(6, "¶Ç°eªùÃö³¬.");
+            pi.getPlayer().dropMessage(6, "å‚³é€é–€é—œé–‰.");
             return false;
         }else {
             pi.getPlayer().changeMap(target, targetPortal);

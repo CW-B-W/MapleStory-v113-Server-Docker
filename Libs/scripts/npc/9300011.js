@@ -3,7 +3,7 @@ var points;
 function start() {
     var record = cm.getQuestRecord(150001);
     points = record.getCustomData() == null ? "0" : record.getCustomData();
-    cm.sendSimple("§A­n¬D¾ÔBOSS?\n\r\n\r #b#L3#¬d¬İÂI¼Æ#l#k \r\n\r\n #b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L28# #v03994118##l");
+    cm.sendSimple("ä½ è¦æŒ‘æˆ°BOSS?\n\r\n\r #b#L3#æŸ¥çœ‹é»æ•¸#l#k \r\n\r\n #b#L0# #v03994115##l #L1# #v03994116##l #L2# #v03994117##l #L28# #v03994118##l");
 }
 
 function action(mode, type, selection) {
@@ -34,13 +34,13 @@ function action(mode, type, selection) {
 			    q.startInstance(cm.getParty(), cm.getMap());
 			}
 		    } else {
-			cm.sendOk("¥ş³¡¶¤¤Í¥²¶·70¯Å¥H¤W");
+			cm.sendOk("å…¨éƒ¨éšŠå‹å¿…é ˆ70ç´šä»¥ä¸Š");
 		    }
 		} else {
-		    cm.sendOk("½Ğ¶¤ªø§ä§Ú¹ï¸Ü­ò");
+		    cm.sendOk("è«‹éšŠé•·æ‰¾æˆ‘å°è©±å”·");
 		}
 		} else {
-		    cm.sendOk("½Ğ¥ı¥[¤J¶¤¥î");
+		    cm.sendOk("è«‹å…ˆåŠ å…¥éšŠä¼");
 		}
 		break;
 	    case 1:

@@ -50,12 +50,12 @@ function action(mode, type, selection) {
 			if(cm.getMapId() ==240050000){
 				// Slate has no preamble, directly checks if you're in a party
 				if (cm.getParty() == null) { // no party
-					cm.sendSimple("³òÂ¶µÛ¨½µ{¸Oªº¨¸´c®ğ®§...");
+					cm.sendSimple("åœç¹è‘—é‡Œç¨‹ç¢‘çš„é‚ªæƒ¡æ°£æ¯...");
 					cm.dispose();
 					return;
 				}
 				if (!cm.isLeader()) { // not party leader
-					cm.sendSimple("§A¤£¬O¶¤ªø.");
+					cm.sendSimple("ä½ ä¸æ˜¯éšŠé•·.");
 					cm.dispose();
 				}
 				else {
@@ -82,14 +82,14 @@ function action(mode, type, selection) {
 						// Kick it into action.  Slate says nothing here, just warps you in.
 						var em = cm.getEventManager("HontalePQ");
 						if (em == null) {
-							cm.sendSimple("·í«e¨Æ¥ó¥ô°È¤£¥i¨Ï¥Î.");
+							cm.sendSimple("ç•¶å‰äº‹ä»¶ä»»å‹™ä¸å¯ä½¿ç”¨.");
 						}
 						else {
 							var prop = em.getProperty("state");
 							if (prop.equals("0") || prop == null) {
 								em.startInstance(cm.getParty(),cm.getPlayer().getMap());
 							}else{
-								cm.sendSimple("¤w¸g¦³¤H¦b¬D¾Ô¥ô°È");
+								cm.sendSimple("å·²ç¶“æœ‰äººåœ¨æŒ‘æˆ°ä»»å‹™");
 							}
 						}
 						cm.dispose();
@@ -107,7 +107,7 @@ function action(mode, type, selection) {
 				}
 				curStage = parseInt(eim.getProperty("theLvl"));
 				if(curStage != 4){
-					cm.sendOk("½Ğ¥ı¸Ñ¨M°g®c«ÇªºÃøÃD...");
+					cm.sendOk("è«‹å…ˆè§£æ±ºè¿·å®®å®¤çš„é›£é¡Œ...");
 					cm.dispose();
 				}else{
 					if(cm.haveItem(4001092, 1) && cm.isLeader()){
@@ -119,7 +119,7 @@ function action(mode, type, selection) {
                         }
 						cm.gainItem(4001092, -1);
 					}else{
-						cm.sendOk("½Ğ¶¤ªø±aµÛÆ_°Í¹L¨Ó");
+						cm.sendOk("è«‹éšŠé•·å¸¶è‘—é‘°åŒ™éä¾†");
 					}
 					cm.dispose();
 				}
@@ -135,7 +135,7 @@ function action(mode, type, selection) {
                         }
 						cm.gainItem(4001093, -6);
 				}else{
-					cm.sendOk("½Ğ¶¤ªø±aµÛ¤»§âÂÅ¦âÆ_°Í¹L¨Ó");
+					cm.sendOk("è«‹éšŠé•·å¸¶è‘—å…­æŠŠè—è‰²é‘°åŒ™éä¾†");
 				}
 				cm.dispose();
 			}

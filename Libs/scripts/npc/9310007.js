@@ -11,9 +11,9 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 			if(cm.getPlayer().getMapId() != 701010323){
-				cm.sendYesNo("·Q©ñ±ó¤F¶Ü¡H");
+				cm.sendYesNo("æƒ³æ”¾æ£„äº†å—Žï¼Ÿ");
 			}else{
-				cm.sendYesNo("·Q¥X¥h¶Ü¡H");
+				cm.sendYesNo("æƒ³å‡ºåŽ»å—Žï¼Ÿ");
 			}
 			
     } else if (status == 1) {

@@ -19,9 +19,9 @@ function action(mode, type, selection) {
 		cm.removeAll(4001022);
 		cm.removeAll(4001023);
 		if (cm.getParty() == null) { // No Party
-			cm.sendSimple("How about you and your party members collectively beating a quest? Here you'll find obstacles and problems where you won't be able to beat it unless with great teamwork. If you want to try it, please tell the #bleader of your party#k to talk to me.\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#§Ú­n§I´«¦³µõ²ªªº²´Ãè#l");
+			cm.sendSimple("How about you and your party members collectively beating a quest? Here you'll find obstacles and problems where you won't be able to beat it unless with great teamwork. If you want to try it, please tell the #bleader of your party#k to talk to me.\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#æˆ‘è¦å…Œæ›æœ‰è£‚ç—•çš„çœ¼é¡#l");
 		} else if (!cm.isLeader()) { // Not Party Leader
-			cm.sendSimple("If you want to try the quest, please tell the #bleader of your party#k to talk to me.#b\r\n#L0#§Ú­n§I´«¦³µõ²ªªº²´Ãè#l");
+			cm.sendSimple("If you want to try the quest, please tell the #bleader of your party#k to talk to me.#b\r\n#L0#æˆ‘è¦å…Œæ›æœ‰è£‚ç—•çš„çœ¼é¡#l");
 		} else {
 			// Check if all party members are within PQ levels
 			var party = cm.getParty().getMembers();
@@ -57,11 +57,11 @@ function action(mode, type, selection) {
 						cm.removeAll(4001023);
 						cm.dispose();
 					} else {
-						cm.sendSimple("Another party has already entered the #rParty Quest#k in this channel. Please try another channel, or wait for the current party to finish.#b\r\n#L0#§Ú­n§I´«¦³µõ²ªªº²´Ãè#");
+						cm.sendSimple("Another party has already entered the #rParty Quest#k in this channel. Please try another channel, or wait for the current party to finish.#b\r\n#L0#æˆ‘è¦å…Œæ›æœ‰è£‚ç—•çš„çœ¼é¡#");
 					}
 				}
 			} else {
-				cm.sendSimple("Your party is invalid. Please adhere to the following requirements:\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#§Ú­n§I´«¦³µõ²ªªº²´Ãè#l");
+				cm.sendSimple("Your party is invalid. Please adhere to the following requirements:\r\n\r\n#rRequirements: " + minPartySize + " Party Members, all between level " + minLevel + " and level " + maxLevel + ".#b\r\n#L0#æˆ‘è¦å…Œæ›æœ‰è£‚ç—•çš„çœ¼é¡#l");
 			}
 		}
     } else { //broken glass

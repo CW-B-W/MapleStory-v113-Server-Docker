@@ -12,13 +12,13 @@ function action(mode, type, selection) {
     if (status == 0) {
 			var em = cm.getEventManager("ChineseBoss");
 			if(em == null){
-				cm.sendOk("¥ô°È¤£¥i¥Î");
+				cm.sendOk("ä»»å‹™ä¸å¯ç”¨");
 				cm.dispose();
 			}else if (em.getProperty("state").equals("0")) {
 				em.startInstance(cm.getPlayer());
 				cm.dispose();
 			}else{
-				cm.sendOk("¤w¸g¦³¤H¦b¬D¾Ô¸¼°G¤ı¤F¡A½Ğµ¥¤@¤U");
+				cm.sendOk("å·²ç¶“æœ‰äººåœ¨æŒ‘æˆ°èœˆèš£ç‹äº†ï¼Œè«‹ç­‰ä¸€ä¸‹");
 				cm.dispose();
 			}
 			

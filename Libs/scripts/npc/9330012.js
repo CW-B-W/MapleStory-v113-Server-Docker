@@ -57,7 +57,7 @@ var reward;
 
 function action(mode, type, selection) {
 	if (status == 2 && mode != 1 ) {
-		cm.sendOk("¯u¥i±¤");
+		cm.sendOk("çœŸå¯æƒœ");
 		cm.safeDispose();
 		return;
 	}
@@ -75,22 +75,22 @@ function action(mode, type, selection) {
 		cm.sendSimple(eRequired);
 		lastSelection = selection;
 	}else if(status == 2){	
-		cm.sendYesNo("§A½T©w§A­n»s§@#b#v"+ reward + "##t" + reward +"##k¶Ü?\r\n" );
+		cm.sendYesNo("ä½ ç¢ºå®šä½ è¦è£½ä½œ#b#v"+ reward + "##t" + reward +"##kå—?\r\n" );
     }else if(status == 3){
 		for(var i = 0 ; i < requiredItem.length ; i++){
 			if( !cm.haveItem(requiredItem[i],requiredItemNum[i]) ){
-				cm.sendOk("ªF¦è¦n¹³¤£°÷­C\r\n" );
+				cm.sendOk("æ±è¥¿å¥½åƒä¸å¤ è€¶\r\n" );
 				cm.dispose();
 				return ;
 			}
 		}
 		if(cm.getMeso() < remoney){
-			cm.sendOk("¿ú¤£°÷\r\n" );
+			cm.sendOk("éŒ¢ä¸å¤ \r\n" );
 			cm.dispose();
 			return ;
 		}
 		if(!cm.canHold(reward)){
-			cm.sendOk("§Aªºª««~Äæ¤w¸gº¡¤F\r\n" );
+			cm.sendOk("ä½ çš„ç‰©å“æ¬„å·²ç¶“æ»¿äº†\r\n" );
 			cm.dispose();
 			return ;
 		}
@@ -99,13 +99,13 @@ function action(mode, type, selection) {
 			cm.gainItem(requiredItem[i] , -requiredItemNum[i]);
 		}
 		cm.gainItem(reward,1);
-		cm.sendOk("¤w¸gÀ°§A»s§@§¹¦¨!\r\n" );
+		cm.sendOk("å·²ç¶“å¹«ä½ è£½ä½œå®Œæˆ!\r\n" );
 		cm.dispose();
 	}
 }
 
 function makeChoices(a){
-    var result  = "§Ú¥i¥HÀ°§A»s§@¤p¹CÀ¸¹D¨ã­ò!\r\n§A·Q»s§@?\r\n";
+    var result  = "æˆ‘å¯ä»¥å¹«ä½ è£½ä½œå°éŠæˆ²é“å…·å”·!\r\nä½ æƒ³è£½ä½œ?\r\n";
     for (var x = 0; x< a.length; x++){
 		result += " #L" + x + "##v" + a[x] + "##t" + a[x] + "##l\r\n";
     }
@@ -113,9 +113,9 @@ function makeChoices(a){
 }
 
 function makeRequire(a,b,re,m){
-    var result  = "»s§@#b#v"+re+"##t"+re+"##k»İ­n\r\n\r\n";
+    var result  = "è£½ä½œ#b#v"+re+"##t"+re+"##kéœ€è¦\r\n\r\n";
     for (var x = 0; x< a.length; x++){
-		result += "#v" + a[x] + "##t" + a[x] + "# " + b[x]+ "­Ó#l\r\n";
+		result += "#v" + a[x] + "##t" + a[x] + "# " + b[x]+ "å€‹#l\r\n";
     }
 	result +="#fUI/UIWindow.img/QuestIcon/7/0##b"+m+"#k\r\n";
     return result;

@@ -23,7 +23,7 @@ function action(mode, type, selection) {
 	cm.dispose();
 	return;
     } else if (status >= 2 && mode == 0) {
-	cm.sendNext("µ¥§A§ïÅÜ¤F¤ß·N¦b¨Ó§ä§Ú");
+	cm.sendNext("ç­‰ä½ æ”¹è®Šäº†å¿ƒæ„åœ¨ä¾†æ‰¾æˆ‘");
 	cm.dispose();
 	return;
     }
@@ -32,18 +32,18 @@ function action(mode, type, selection) {
     else
 	status--;
     if (status == 0) {
-	cm.sendNext("«¢Åo,§Ú¥i¥H±a§A¥h§A·Q¥hªº¦a¤è");
+	cm.sendNext("å“ˆå›‰,æˆ‘å¯ä»¥å¸¶ä½ å»ä½ æƒ³å»çš„åœ°æ–¹");
     } else if (status == 1) {
 	var job = cm.getJob();
 	if (job == 0 || job == 1000 || job == 2000) {
-	    var selStr = "§Ú­Ì¦³¹ï·s¤â 90% Àu´f ½Ğ°İ§A·Q¥h­şÃä?#b";
+	    var selStr = "æˆ‘å€‘æœ‰å°æ–°æ‰‹ 90% å„ªæƒ  è«‹å•ä½ æƒ³å»å“ªé‚Š?#b";
 	    for (var i = 0; i < maps.length; i++) {
-		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " ·¬¹ô)#l";
+		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " æ¥“å¹£)#l";
 	    }
 	} else {
-	    var selStr = "½Ğ°İ§A·Q¥h­şÃä#b";
+	    var selStr = "è«‹å•ä½ æƒ³å»å“ªé‚Š#b";
 	    for (var i = 0; i < maps.length; i++) {
-		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " ·¬¹ô)#l";
+		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " æ¥“å¹£)#l";
 	    }
 	}
 	cm.sendSimple(selStr);
@@ -56,11 +56,11 @@ function action(mode, type, selection) {
 	    sCost = rCost[selection];
 	    show = cost[selection];
 	}
-	cm.sendYesNo("§A½T©w­n«e©¹ #b#m" + maps[selection] + "##k? ±N·|»İ­n #b" + show + " ·¬¹ô#k.");
+	cm.sendYesNo("ä½ ç¢ºå®šè¦å‰å¾€ #b#m" + maps[selection] + "##k? å°‡æœƒéœ€è¦ #b" + show + " æ¥“å¹£#k.");
 	selectedMap = selection;
     } else if (status == 3) {
 	if (cm.getMeso() < sCost) {
-	    cm.sendNext("©êºp§Aªº·¬¹ô¤£¨¬,©Ò¥HµLªk«e©¹");
+	    cm.sendNext("æŠ±æ­‰ä½ çš„æ¥“å¹£ä¸è¶³,æ‰€ä»¥ç„¡æ³•å‰å¾€");
 	} else {
 	    cm.gainMeso(-sCost);
 	    cm.warp(maps[selectedMap]);

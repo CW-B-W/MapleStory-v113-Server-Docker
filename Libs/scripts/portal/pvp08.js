@@ -1,4 +1,4 @@
 function enter(pi) {
-	pi.mapMessage("«Ü©êºp¡APVP¼È®É¤£¶}©ñ!");
+	pi.mapMessage("å¾ˆæŠ±æ­‰ï¼ŒPVPæš«æ™‚ä¸é–‹æ”¾!");
 	return false;
 }

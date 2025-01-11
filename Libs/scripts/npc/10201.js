@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendNext("¦pªG§A·QÅéÅçªk®vªº·PÄ±¡A¦A¨Ó¸ò§Ú¹ï¸Ü¡C");
+	    cm.sendNext("å¦‚æœä½ æƒ³é«”é©—æ³•å¸«çš„æ„Ÿè¦ºï¼Œå†ä¾†è·Ÿæˆ‘å°è©±ã€‚");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("ªk®v¦³µØÄRªºÄİ©Ê¬°°ò¥»ªºªk³N©M»²§UÅ]ªk¡A¯àÀ°§U¾ã­Ó¹Î¶¤¡C²Ä¤G¦¸ÂàÂ¾«á¡AÄİ©ÊªºÅ]ªk±N´£¨Ñ¤j¶qªº¬Û§JªºÄİ©Ê¼Ä¤H³y¦¨¶Ë®`¡C");
+	cm.sendNext("æ³•å¸«æœ‰è¯éº—çš„å±¬æ€§ç‚ºåŸºæœ¬çš„æ³•è¡“å’Œè¼”åŠ©é­”æ³•ï¼Œèƒ½å¹«åŠ©æ•´å€‹åœ˜éšŠã€‚ç¬¬äºŒæ¬¡è½‰è·å¾Œï¼Œå±¬æ€§çš„é­”æ³•å°‡æä¾›å¤§é‡çš„ç›¸å…‹çš„å±¬æ€§æ•µäººé€ æˆå‚·å®³ã€‚");
     } else if (status == 1) {
-	cm.sendYesNo("§A·QÅéÅç¤@¤Uªk®vªº·PÄ±¶Ü¡H");
+	cm.sendYesNo("ä½ æƒ³é«”é©—ä¸€ä¸‹æ³•å¸«çš„æ„Ÿè¦ºå—ï¼Ÿ");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020200, 0); // Effect/Direction3.img/magician/Scene00

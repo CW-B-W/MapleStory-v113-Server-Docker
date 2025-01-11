@@ -35,7 +35,7 @@ function action(mode, type, selection) {
         cm.dispose();
     } else {
         if (mode == 0 && status == 1) {
-            cm.sendOk("½Ğ­«·s¹ï¸Ü.");
+            cm.sendOk("è«‹é‡æ–°å°è©±.");
             cm.dispose();
             return;
         }
@@ -45,58 +45,58 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
             if (cm.getPlayer().getJob() <= 500 || cm.getPlayer().getJob() >= 600 || cm.getPlayer().getJob() % 10 != 0) {
-                cm.sendOk("#rOdin#k»P§A¦P¦b!");
+                cm.sendOk("#rOdin#kèˆ‡ä½ åŒåœ¨!");
                 cm.dispose();
                 return;
             }
-            if (cm.getQuestStatus(100102) == 2 ) { //§¹¦¨
-                cm.sendNext("#rBy Odin's ring!#k §A²{¦b¥i¥HÅÜ±o§ó±j.");
-            } else if (cm.getQuestStatus(100102) == 1 ) { //¶}©l
-                cm.sendOk("¦b¦B­ì³·°ì¤º§ä¨ì#r³·­ì¸t¦a#k¡A¥Bµo²{¸Ì­±ªº¯«¸t¥ÛÀY");
+            if (cm.getQuestStatus(100102) == 2 ) { //å®Œæˆ
+                cm.sendNext("#rBy Odin's ring!#k ä½ ç¾åœ¨å¯ä»¥è®Šå¾—æ›´å¼·.");
+            } else if (cm.getQuestStatus(100102) == 1 ) { //é–‹å§‹
+                cm.sendOk("åœ¨å†°åŸé›ªåŸŸå…§æ‰¾åˆ°#ré›ªåŸè–åœ°#kï¼Œä¸”ç™¼ç¾è£¡é¢çš„ç¥è–çŸ³é ­");
                 cm.dispose();
-            } else if (cm.getQuestStatus(100101) == 2) { //§¹¦¨
-                cm.sendNext("#rBy Odin's raven!#k §A½T¹ê«ÜÀu¨q");
-            } else if (cm.getQuestStatus(100100) == 1 ) { // ¶}©l
-                cm.sendOk("²{¦b¡A¦^¥h§ä#b¥d¥ìµY#k. ¥L·|À°§U§A.");
+            } else if (cm.getQuestStatus(100101) == 2) { //å®Œæˆ
+                cm.sendNext("#rBy Odin's raven!#k ä½ ç¢ºå¯¦å¾ˆå„ªç§€");
+            } else if (cm.getQuestStatus(100100) == 1 ) { // é–‹å§‹
+                cm.sendOk("ç¾åœ¨ï¼Œå›å»æ‰¾#bå¡ä¼Šç³#k. ä»–æœƒå¹«åŠ©ä½ .");
                 cm.dispose();
             } else if (cm.getPlayer().getJob() <600 && cm.getPlayer().getJob() > 500 && cm.getPlayer().getJob() % 10 == 0 && cm.getPlayer().getLevel() >= 70) {
-                cm.sendNext("#rBy Odin's beard!#k§A«Ü±j®«.");
+                cm.sendNext("#rBy Odin's beard!#kä½ å¾ˆå¼·æ‚.");
             } else {
-                cm.sendOk("ÁÙ¤£¬O®É­Ô...");
+                cm.sendOk("é‚„ä¸æ˜¯æ™‚å€™...");
                 cm.dispose();
             }
         } else if (status == 1) {
 			if(cm.getPlayer().getJob() % 10 != 0){
 				cm.dispose();
 			}
-            if (cm.getQuestStatus(100102) == 2) { //§¹¦¨
+            if (cm.getQuestStatus(100102) == 2) { //å®Œæˆ
                 cm.changeJob(cm.getPlayer().getJob() + 1);
-                cm.sendOk("§AÅÜ±o§ó¥[±j¤j¤F!");
+                cm.sendOk("ä½ è®Šå¾—æ›´åŠ å¼·å¤§äº†!");
                 cm.dispose();
-            } else if (cm.getQuestStatus(100101) == 2) { //§¹¦¨
+            } else if (cm.getQuestStatus(100101) == 2) { //å®Œæˆ
 				if(cm.haveItem(4031057)){
-					cm.sendAcceptDecline("½T©w¦n­n°µ³Ì²×´úÅç¤F?");
+					cm.sendAcceptDecline("ç¢ºå®šå¥½è¦åšæœ€çµ‚æ¸¬é©—äº†?");
 				}else{
-					cm.sendOk("§A¨S¦³#b¤O¶q¶µÁå#k");
+					cm.sendOk("ä½ æ²’æœ‰#båŠ›é‡é …éŠ#k");
 					cm.dispose();
 				}
             } else {
-                cm.sendAcceptDecline("¦ı¬O§ÚÁÙ¥i¥HÅı§A§ó±j¡A§A·Q­n±µ¨ü¬D¾Ô¶Ü?");
+                cm.sendAcceptDecline("ä½†æ˜¯æˆ‘é‚„å¯ä»¥è®“ä½ æ›´å¼·ï¼Œä½ æƒ³è¦æ¥å—æŒ‘æˆ°å—?");
             }
         } else if (status == 2) {
-            if (cm.getQuestStatus(100101) == 2) { //§¹¦¨
+            if (cm.getQuestStatus(100101) == 2) { //å®Œæˆ
 				if(cm.haveItem(4031057)){
 					cm.startQuest(100102);
 					cm.gainItme(4031057,-1);
-					cm.sendOk("µo²{#r³·­ì¸t¦a#kÁôÂÃªºªº¯«¸t¥ÛÀY¨Ã¥B±a¦^#b´¼¼z¶µÁå#k");
+					cm.sendOk("ç™¼ç¾#ré›ªåŸè–åœ°#kéš±è—çš„çš„ç¥è–çŸ³é ­ä¸¦ä¸”å¸¶å›#bæ™ºæ…§é …éŠ#k");
 					cm.dispose();
 				}else{
-					cm.sendOk("§A¨S¦³#b´¼¼z¶µÁå#k");
+					cm.sendOk("ä½ æ²’æœ‰#bæ™ºæ…§é …éŠ#k");
 					cm.dispose();
 				}
             } else {
                 cm.startQuest(100100);
-                cm.sendOk("¦^¥h§ä#b¥d¥ìµY#k.¥L·|À°§U§A.");
+                cm.sendOk("å›å»æ‰¾#bå¡ä¼Šç³#k.ä»–æœƒå¹«åŠ©ä½ .");
                 cm.dispose();
             }
         }

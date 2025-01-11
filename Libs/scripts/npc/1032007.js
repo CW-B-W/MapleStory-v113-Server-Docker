@@ -14,15 +14,15 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	cm.sendYesNo("hi§A¦n§Ú¬O²î²¼³c°â­û\r\n³q©¹¤ÑªÅ¤§«°ªº³æµ{²î²¼¨C±i¬O#b5000·¬¹ô");
+	cm.sendYesNo("hiä½ å¥½æˆ‘æ˜¯èˆ¹ç¥¨è²©å”®å“¡\r\né€šå¾€å¤©ç©ºä¹‹åŸçš„å–®ç¨‹èˆ¹ç¥¨æ¯å¼µæ˜¯#b5000æ¥“å¹£");
     } else if (status == 1) {
 	if (cm.getMeso() < 5000) {
-	    cm.sendNext("½Ğ½T»{§Aªº¾Ö¦³#b5000·¬¹ô");
+	    cm.sendNext("è«‹ç¢ºèªä½ çš„æ“æœ‰#b5000æ¥“å¹£");
 	    cm.safeDispose();
 	} else {
 	    cm.gainMeso(-5000);
 	    cm.gainItem(4031045, 1);
-            cm.sendOk("²î²¼µ¹§A§a")
+            cm.sendOk("èˆ¹ç¥¨çµ¦ä½ å§")
 	    cm.dispose();
 	}
     }

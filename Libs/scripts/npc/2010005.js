@@ -13,7 +13,7 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendNext("¦pªG§A·Q§ïÅÜ¥D·N¦A¸ò§Ú»¡¸Ü¡C");
+	    cm.sendNext("å¦‚æœä½ æƒ³æ”¹è®Šä¸»æ„å†è·Ÿæˆ‘èªªè©±ã€‚");
 	    cm.safeDispose();
 	    return;
 	}

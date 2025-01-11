@@ -23,7 +23,7 @@ function cancelSchedule() {
 
 function setup() {
     em.scheduleRandomEvent();
-    em.schedule("scheduleNew", 300000); // ╓╜╓юда
+    em.schedule("scheduleNew", 300000); // б╓б╜б╓ц─ц└ц│
 }
 
 function seal() {

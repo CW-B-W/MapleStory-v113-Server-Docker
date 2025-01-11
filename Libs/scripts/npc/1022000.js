@@ -27,7 +27,7 @@ function action(mode, type, selection) {
     if (status == 0) {
 	if (cm.getJob() == 0) {
 	    if (cm.getPlayerStat("LVL") >= 10 && cm.getJob() == 0) {
-		cm.sendNext("So you decided to become a #r¼C¤h#k?");
+		cm.sendNext("So you decided to become a #rï¿½Cë°›#k?");
 	    } else {
 		cm.sendOk("Train a bit more and I can show you the way of the #rWarrior#k.");
 		cm.dispose();
@@ -67,7 +67,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.sendNextPrev("It is an important and final choice. You will not be able to turn back.");
     } else if (status == 2) {
-	cm.sendYesNo("Do you want to become a #r¼C¤h#k?");
+	cm.sendYesNo("Do you want to become a #rï¿½Cë°›#k?");
     } else if (status == 3) {
 	if (cm.getJob() == 0) {
 	    cm.resetStats(35, 4, 4, 4);
@@ -79,7 +79,7 @@ function action(mode, type, selection) {
 	cm.sendOk("So be it! Now go, and go with pride.");
 	cm.dispose();
     } else if (status == 11) {
-	cm.sendNextPrev("You may be ready to take the next step as a #r¨g¾Ô¤h#k, #r¨£²ßÃM¤h#k or #rºjÃM§L#k.")
+	cm.sendNextPrev("You may be ready to take the next step as a #rë¹¦ì®’ë°›#k, #rëºšï¿½ï¿½ì¸ë°›#k or #rì£©ì¸ë·»#k.")
     } else if (status == 12) {
 	cm.askAcceptDecline("But first I must test your skills. Are you ready?");
     } else if (status == 13) {
@@ -88,7 +88,7 @@ function action(mode, type, selection) {
 	cm.sendOk("Go see the #bJob Instructor#k near Perion. He will show you the way.");
 	cm.dispose();
     } else if (status == 21) {
-	cm.sendSimple("What do you want to become?#b\r\n#L0#¨g¾Ô¤h#l\r\n#L1#¨£²ßÃM¤h#l\r\n#L2#ºjÃM§L#l#k");
+	cm.sendSimple("What do you want to become?#b\r\n#L0#ë¹¦ì®’ë°›#l\r\n#L1#ëºšï¿½ï¿½ì¸ë°›#l\r\n#L2#ì£©ì¸ë·»#l#k");
     } else if (status == 22) {
 	var jobName;
 	if (selection == 0) {

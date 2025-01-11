@@ -1,6 +1,6 @@
 var status = 0;
 function start() {
-	cm.sendYesNo("±z·Q­n«e©¹¼Z¸¨«°¥«¶Ü?¥u»İ­n5000·¬¹ô");
+	cm.sendYesNo("æ‚¨æƒ³è¦å‰å¾€å¢®è½åŸå¸‚å—?åªéœ€è¦5000æ¥“å¹£");
 }
 
 function action(mode, type, selection) {
@@ -11,7 +11,7 @@ function action(mode, type, selection) {
 	status++;
 	if (status == 1) {
 		if (cm.getMeso() < 5000) {
-			cm.sendNext("±z¨S¦³5000¤¸·¬¹ô!");
+			cm.sendNext("æ‚¨æ²’æœ‰5000å…ƒæ¥“å¹£!");
 		} else {
 			cm.gainMeso(-5000);
 			cm.warp(103000100);

@@ -18,12 +18,12 @@ function action(mode, type, selection) {
 	status--;
 
     if (status == 0)
-	cm.sendSimple("§A§ä¥»®c¦³¤°»ò¨Æ±¡\r\n#b#L0#³Ð«Ø/§ó§ï¤½·|À²³¹#l#k");
+	cm.sendSimple("ä½ æ‰¾æœ¬å®®æœ‰ä»€éº¼äº‹æƒ…\r\n#b#L0#å‰µå»º/æ›´æ”¹å…¬æœƒå¾½ç« #l#k");
     else if (status == 1) {
 	sel = selection;
 	if (selection == 0) {
 	    if (cm.getPlayerStat("GRANK") == 1)
-		cm.sendYesNo("Creating or changing Guild Emblem costs #b1,000,000·¬¹ô#k, are you sure you want to continue?");
+		cm.sendYesNo("Creating or changing Guild Emblem costs #b1,000,000æ¥“å¹£#k, are you sure you want to continue?");
 	    else
 		cm.sendOk("You must be the Guild Leader to change the Emblem.  Please tell your leader to speak with me.");
 	}

@@ -12,7 +12,7 @@ em.setProperty("state", "1");
         var map = eim.setInstanceMap(910010000);
         map.resetFully();
 	map.setSpawns(false);
-    eim.startEventTimer(600000); //10 ¤À
+    eim.startEventTimer(600000); //10 åˆ†
     return eim;
 }
 
@@ -46,7 +46,7 @@ function playerDisconnected(eim, player) {
 
 function monsterValue(eim, mobId) {
     if (mobId == 9300061) {
-	eim.broadcastPlayerMsg(5, "¤ë¨ß³Q±þ¦º¤F ¶ã¶ã");
+	eim.broadcastPlayerMsg(5, "æœˆå…”è¢«æ®ºæ­»äº† å—šå—š");
 	end(eim);
     }
     return 1;

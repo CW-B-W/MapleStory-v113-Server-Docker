@@ -32,11 +32,11 @@ function enter(pi) {
     var avail = eim.getProperty("1stageclear");
     if (!pi.haveItem(4001087, 1)) {
         // do nothing; send message to player
-        pi.getPlayer().dropMessage(6, "³o­Ó¶Ç°eªù³òÂ¶µÛîî¶ÂÀs¤ıªº¨¸´c®ğ®§");
+        pi.getPlayer().dropMessage(6, "é€™å€‹å‚³é€é–€åœç¹è‘—é—‡é»‘é¾ç‹çš„é‚ªæƒ¡æ°£æ¯");
         return false;
     }else {
         pi.gainItem(4001087, -1);
-        pi.getPlayer().dropMessage(6, "³o­ÓÆ_°Í¨Ï±oîî¶ÂÀs¤ıªº¨¸´c®ğ®§®ø¥¢...");
+        pi.getPlayer().dropMessage(6, "é€™å€‹é‘°åŒ™ä½¿å¾—é—‡é»‘é¾ç‹çš„é‚ªæƒ¡æ°£æ¯æ¶ˆå¤±...");
         pi.getPlayer().changeMap(target, targetPortal);
         return true;
     }

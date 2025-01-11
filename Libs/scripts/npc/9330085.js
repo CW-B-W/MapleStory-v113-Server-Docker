@@ -10,7 +10,7 @@ function action(mode, type, selection) {
 	            cm.dispose();
 		    break;
 		default:
-		    cm.sendOk("³o­ÓÀW¹D¨S¦³¬¡°Ê³á");
+		    cm.sendOk("é€™å€‹é »é“æ²’æœ‰æ´»å‹•å–”");
 		    break;
 	    }
 }

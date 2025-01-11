@@ -32,7 +32,7 @@ function enter(pi) {
         pi.getPlayer().changeMap(target, target.getPortal("st00"));
         return true;
     } else {
-        pi.playerMessage(0, "¿ù»~.");
+        pi.playerMessage(0, "Â¿Ã¹Â»~.");
         return false;
     }
 }

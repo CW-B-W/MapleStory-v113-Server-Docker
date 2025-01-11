@@ -18,7 +18,7 @@ function start() {
 
 function action(mode, type, selection) {
     if (status >= 27 && mode == 0) {
-	cm.sendNext("Ãø¹D§A¹ï³o­Ó¬üÄRªº®qÀ¬ÁÙ¦s¦³¿³½ì¶Ü¡H¬JµM³o¼Ëªº¸Ü§Ú¤]¤£¤è«Kªı¤î§A¤F¡A§Ú­Ì¤U¦¸¨£¡C");
+	cm.sendNext("é›£é“ä½ å°é€™å€‹ç¾éº—çš„å³¶å¶¼é‚„å­˜æœ‰èˆˆè¶£å—ï¼Ÿæ—¢ç„¶é€™æ¨£çš„è©±æˆ‘ä¹Ÿä¸æ–¹ä¾¿é˜»æ­¢ä½ äº†ï¼Œæˆ‘å€‘ä¸‹æ¬¡è¦‹ã€‚");
 	cm.dispose();
 	return;
     } else if (((status == 1 || status == 2 || status == 26) && mode == 0) || ((status == 6 || status == 9 || status == 12 || status == 15 || status == 18 || status == 21) && mode == 1)) {
@@ -30,23 +30,23 @@ function action(mode, type, selection) {
     else
 	status--;
     if (status == 0) {
-	cm.sendNext("§A·Q¥h¨ä¥L«°Âí¶Ü¡H ¥u»İ­n¤@ÂIÂI¿ú¡C#rªì¤ßªÌ¾Ö¦³90%ªº§é¦©³á!!");
+	cm.sendNext("ä½ æƒ³å»å…¶ä»–åŸé®å—ï¼Ÿ åªéœ€è¦ä¸€é»é»éŒ¢ã€‚#råˆå¿ƒè€…æ“æœ‰90%çš„æŠ˜æ‰£å–”!!");
     } else if (status == 1) {
-	cm.sendSimple("¨SÃö«Y¡A§Úª¾¹D§A¬O²Ä¤@¦¸¨Óºû¦h§Q¨È´ä¡A¤£¥Î¤Óºò±i\r\n#L1#Æ[¬İ¦³­ş¨Ç¦a¤è¥i¥H¥h#k#l");
+	cm.sendSimple("æ²’é—œä¿‚ï¼Œæˆ‘çŸ¥é“ä½ æ˜¯ç¬¬ä¸€æ¬¡ä¾†ç¶­å¤šåˆ©äºæ¸¯ï¼Œä¸ç”¨å¤ªç·Šå¼µ\r\n#L1#è§€çœ‹æœ‰å“ªäº›åœ°æ–¹å¯ä»¥å»#k#l");
     } else if (status == 2) {
 	if (selection == 0) {
 	    cm.sendSimple("There are 7 big towns here in Victoria Island. Which of those do you want to know more of?\r\n#b#L0##m104000000##l\r\n#L1##m102000000##l\r\n#L2##m101000000##l\r\n#L3##m100000000##l\r\n#L4##m103000000##l\r\n#L5##m120000000##l\r\n#L6##m105040300##l");
 	} else if (selection == 1) {
 	    status = 26;
 	    if (cm.getJob() == 0) {
-		var selStr = "ªì¤ßªÌ¾Ö¦³90%ªº§é¦©!!»¡»¡¬İ§A·Q¥h­ş¸Ì§a#b";
+		var selStr = "åˆå¿ƒè€…æ“æœ‰90%çš„æŠ˜æ‰£!!èªªèªªçœ‹ä½ æƒ³å»å“ªè£¡å§#b";
 		for (var i = 0; i < maps.length; i++) {
-		    selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " ·¬¹ô)#l";
+		    selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " æ¥“å¹£)#l";
 		}
 	    } else {
-		var selStr = "®@!¤£§A¨Ã¤£¬Oªì¤ßªÌ¡A§Ú¥u¯àºâ§A¥ş²¼ªº¨®¿ú¤F¡A·Q¥h­ş¸Ì©O?#b";
+		var selStr = "å“¦!ä¸ä½ ä¸¦ä¸æ˜¯åˆå¿ƒè€…ï¼Œæˆ‘åªèƒ½ç®—ä½ å…¨ç¥¨çš„è»ŠéŒ¢äº†ï¼Œæƒ³å»å“ªè£¡å‘¢?#b";
 		for (var i = 0; i < maps.length; i++) {
-		    selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " ·¬¹ô)#l";
+		    selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " æ¥“å¹£)#l";
 		}
 	    }
 	    cm.sendSimple(selStr);
@@ -126,11 +126,11 @@ function action(mode, type, selection) {
 	} else {
 	    sCost = cost[selection];
 	}
-	cm.sendYesNo("§A½T©w­n«e©¹ #b#m" + maps[selection] + "##k?¦¹½ë¶O¥Î¤@¦@¬O #b" + sCost + " ·¬¹ô#k");
+	cm.sendYesNo("ä½ ç¢ºå®šè¦å‰å¾€ #b#m" + maps[selection] + "##k?æ­¤è¶Ÿè²»ç”¨ä¸€å…±æ˜¯ #b" + sCost + " æ¥“å¹£#k");
 	selectedMap = selection;
     } else if (status == 28) {
 	if (cm.getMeso() < sCost) {
-	    cm.sendNext("¤£¦n·N«ä¡A§Úµo²{¨ì§Aªº·¬¹ô¨Ã¤£°÷¥I¨®²¼¿ú³á");
+	    cm.sendNext("ä¸å¥½æ„æ€ï¼Œæˆ‘ç™¼ç¾åˆ°ä½ çš„æ¥“å¹£ä¸¦ä¸å¤ ä»˜è»Šç¥¨éŒ¢å–”");
 	} else {
 	    cm.gainMeso(-sCost);
 	    cm.warp(maps[selectedMap], 0);

@@ -15,9 +15,9 @@ function action(mode, type, selection) {
     status++;
     if (status == 0) {
 	if(cm.haveItem(4001019)) {
-	    cm.sendYesNo("§A½T©w­n¨Ï¥Î #b#i4001019##t4001019 #?");
+	    cm.sendYesNo("ä½ ç¢ºå®šè¦ä½¿ç”¨ #b#i4001019##t4001019 #?");
 	} else {
-	    cm.sendOk("½Ğ½T»{§Aªº­I¥]¤¤¾Ö¦³ #b#t4001019#");
+	    cm.sendOk("è«‹ç¢ºèªä½ çš„èƒŒåŒ…ä¸­æ“æœ‰ #b#t4001019#");
 	    cm.dispose();
 	}
     }

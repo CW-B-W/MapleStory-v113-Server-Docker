@@ -1,5 +1,5 @@
 /**
-	¸¼°G PQ (¤W®üÅy)
+	Â¸Â¼Â°G PQ (Â¤WÂ®Ã¼Ã…y)
 */
 
 var minPlayers = 1;
@@ -19,7 +19,7 @@ function setup() {
     
     var map = eim.setInstanceMap(701010323);
     map.resetFully();
-    eim.startEventTimer(600000); //10 ¤À
+    eim.startEventTimer(600000); //10 Â¤Ã€
 
     return eim;
 }

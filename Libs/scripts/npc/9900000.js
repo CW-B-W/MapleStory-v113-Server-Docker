@@ -1,5 +1,5 @@
 if (cm.getPlayer().getMeso() >= 2000000) {
  cm.gainMeso(-2000000);
  cm.gainAcash(1);
- cm.sendOk("Àò±o#r1ÂI");
+ cm.sendOk("Ã€Ã²Â±o#r1Ã‚I");
 cm.dispose();

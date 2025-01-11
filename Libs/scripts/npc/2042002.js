@@ -24,7 +24,7 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-        cm.sendSimple("What would you like to do? If you have never participated in the Monster Carnival, you'll need to know a thing or two about it before joining.\r\n#b#L0#§Ú­n«e©¹©Çª«¾İ¥x#l");
+        cm.sendSimple("What would you like to do? If you have never participated in the Monster Carnival, you'll need to know a thing or two about it before joining.\r\n#b#L0#æˆ‘è¦å‰å¾€æ€ªç‰©æ“‚å°#l");
     } else if (status == 1) {
         switch (selection) {
             case 0: {
@@ -36,7 +36,7 @@ function action(mode, type, selection) {
 		    cm.saveLocation("MONSTER_CARNIVAL");
                     cm.warp(980030000, "st00");
                 } else {
-		    cm.sendOK("§Aªºµ¥¯Å¤£°÷©Î¬O¶W¹L-.-");
+		    cm.sendOK("ä½ çš„ç­‰ç´šä¸å¤ æˆ–æ˜¯è¶…é-.-");
                 }
                 cm.dispose();
             }
@@ -63,9 +63,9 @@ function action(mode, type, selection) {
         }
 	cm.getPlayer().endPartyQuest(1301);
         if (carnivalparty.isWinner()) {
-            cm.sendNext("®¥³ß§AÄ¹¤F ¤Ó¯«°Õ\r\n#b©Çª«¾İ¥xÁÉ±Æ¦æ : " + rank);
+            cm.sendNext("æ­å–œä½ è´äº† å¤ªç¥å•¦\r\n#bæ€ªç‰©æ“‚å°è³½æ’è¡Œ : " + rank);
         } else {
-            cm.sendNext("ÁöµM¿é¤F¤]¤£­n®ğ¾kQ_Q\r\n#b©Çª«¾İ¥xÁÉ±Æ¦æ : " + rank);
+            cm.sendNext("é›–ç„¶è¼¸äº†ä¹Ÿä¸è¦æ°£é¤’Q_Q\r\n#bæ€ªç‰©æ“‚å°è³½æ’è¡Œ : " + rank);
         }
     } else if (status == 101) {
         var carnivalparty = cm.getCarnivalParty();

@@ -6,7 +6,7 @@ function start() {
     if (cm.getQuestStatus(100101) == 1 && !cm.haveItem(4031059)) {
 	var em = cm.getEventManager("3rdjob");
 	if (em == null) {
-	    cm.sendOk("¤TÂà¥ô°È¦n¹³¦³¨Ç°İÃD");
+	    cm.sendOk("ä¸‰è½‰ä»»å‹™å¥½åƒæœ‰äº›å•é¡Œ");
 	} else {
 	    em.newInstance(cm.getName()).registerPlayer(cm.getChar());
 	}

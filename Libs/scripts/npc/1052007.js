@@ -28,7 +28,7 @@ function action(mode, type, selection) {
 		    menu += "#L"+i+"##b#m"+mapid[i]+"##k#l\r\n";
 		}
 	    }
-		menu += "#L" + (itemid.length) + "##b¶a≈K 1#k#l\r\n#L" + (itemid.length + 1) + "##b#l\r\n";
+		menu += "#L" + (itemid.length) + "##b¬¶a√ÖK 1#k#l\r\n#L" + (itemid.length + 1) + "##b#l\r\n";
 	    cm.sendSimple(menu);
 	} if (status == 2) {
 	    section = selection;

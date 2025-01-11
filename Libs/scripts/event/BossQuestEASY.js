@@ -94,15 +94,15 @@ function allMonstersDead(eim) {
 
     eim.setProperty("points", totalp);
 
-    eim.broadcastPlayerMsg(5, "±zÀò±o¤F "+num+" BOSSÂI ¡AÁ`¦@¦³"+totalp+".");
+    eim.broadcastPlayerMsg(5, "æ‚¨ç²å¾—äº† "+num+" BOSSé» ï¼Œç¸½å…±æœ‰"+totalp+".");
 
     eim.saveBossQuest(num);
 
     if (mobnum < monster.length) {
-	eim.broadcastPlayerMsg(6, "¤U¤@°¦BOSS§Y±N¥X²{!");
+	eim.broadcastPlayerMsg(6, "ä¸‹ä¸€éš»BOSSå³å°‡å‡ºç¾!");
 } else {
 	eim.saveBossQuest(20);
-	eim.broadcastPlayerMsg(5, "§Aªº¶¤¥î¬D¾ÔÂ²©ö¼Ò¦¡¦¨¥\¡AÀò±o 20 BOSSÂI");
+	eim.broadcastPlayerMsg(5, "ä½ çš„éšŠä¼æŒ‘æˆ°ç°¡æ˜“æ¨¡å¼æˆåŠŸï¼Œç²å¾— 20 BOSSé»");
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

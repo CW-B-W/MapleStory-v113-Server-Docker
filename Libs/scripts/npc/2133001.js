@@ -25,9 +25,9 @@ function action(mode, type, selection) {
 		cm.gainItem(4001169,-10);
 	    } else if (!cm.haveItem(2270004)) {
 		cm.gainItem(2270004,10);
-		cm.sendOk("½Ğ²b¤Æ³o¨Ç©Çª«");
+		cm.sendOk("è«‹æ·¨åŒ–é€™äº›æ€ªç‰©");
 	    } else {
-		cm.sendOk("½Ğ»`¶°10­Ó©Çª«®è!");
+		cm.sendOk("è«‹è’é›†10å€‹æ€ªç‰©æ ª!");
 	    }
 	    break;
 	case 930000600:
@@ -46,7 +46,7 @@ function action(mode, type, selection) {
 	        cm.removeAll(2270004);
 	        cm.warp(930000800,0);
 	} else {
-		pi.playerMessage(5, "½T»{Äæ¦ì¤wº¡");
+		pi.playerMessage(5, "ç¢ºèªæ¬„ä½å·²æ»¿");
 	}
 	    break;
     }

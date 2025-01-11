@@ -35,7 +35,7 @@ function act() {
     var vvpKey;
     var vvpOrig = 4001088;
     var vvpStage = -1;
-    rm.mapMessage(6, "Æ_°Í³Q¶Ç°e¦Ü¬Y³B...");
+    rm.mapMessage(6, "é‘°åŒ™è¢«å‚³é€è‡³æŸè™•...");
     switch (vvpMap) {
         case 240050101 : {
             vvpKey = vvpOrig;
@@ -66,7 +66,7 @@ function act() {
     var theWomanfred = womanfred.getReactorByName("keyDrop1");
     var dropper = eim.getPlayers().get(0);
     womanfred.spawnItemDrop(theWomanfred, dropper, tehWomanfred, theWomanfred.getPosition(), true, true);
-    //womanfred.dropMessage(5, "¤@¹D°{¥ú¡AÆ_°Í±q¾ğ¬}¤¤¥X²{.");
+    //womanfred.dropMessage(5, "ä¸€é“é–ƒå…‰ï¼Œé‘°åŒ™å¾æ¨¹æ´ä¸­å‡ºç¾.");
 }
 	
 	

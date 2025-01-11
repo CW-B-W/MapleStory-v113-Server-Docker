@@ -10,7 +10,7 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendYesNo("­nÂ÷¶}¤F¶Ü?");
+	cm.sendYesNo("è¦é›¢é–‹äº†å—?");
     } else if (status == 1) {
 	cm.warp(910000000,0);
 	cm.dispose();

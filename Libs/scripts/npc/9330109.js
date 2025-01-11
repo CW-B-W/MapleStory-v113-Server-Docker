@@ -19,11 +19,11 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendSimple("§A·Q°µ¤°»ò¡H#b\n\r #L1#ÁÊ¶R³¨³½»ç#l \n\r #L3#¨Ï¥Î°ª¯Å³½»çÅøÀY#l#k");
+	cm.sendSimple("ä½ æƒ³åšä»€éº¼ï¼Ÿ#b\n\r #L1#è³¼è²·é‡£é­šé¤Œ#l \n\r #L3#ä½¿ç”¨é«˜ç´šé­šé¤Œç½é ­#l#k");
     } else if (status == 1) {
 	sel = selection;
 	if (sel == 1) {
-	    cm.sendYesNo("120³½»ç»İ­n300000·¬¹ô¡C ±z­nÁÊ¶R¶Ü¡H");
+	    cm.sendYesNo("120é­šé¤Œéœ€è¦300000æ¥“å¹£ã€‚ æ‚¨è¦è³¼è²·å—ï¼Ÿ");
 	} else if (sel == 3) {
 	    if (cm.canHold(2300001,120) && cm.haveItem(5350000,1)) {
 		if (!cm.haveItem(2300001)) {
@@ -31,7 +31,7 @@ function action(mode, type, selection) {
 		    cm.gainItem(5350000,-1);
 		    cm.sendNext("Happy Fishing~");
 		} else {
-		    cm.sendNext("§A¤w¸g¦³³½»ç¡C");
+		    cm.sendNext("ä½ å·²ç¶“æœ‰é­šé¤Œã€‚");
 		}
 	    } else {
 		cm.sendOk("Please check if you have sufficient inventory slot and the Delicious Bait Can from cash shop with you.");
@@ -46,7 +46,7 @@ function action(mode, type, selection) {
 		    cm.gainItem(2300000, 120);
 		    cm.sendNext("Happy Fishing~");
 		} else {
-		    cm.sendNext("§A¤w¸g¦³³½»ç¡C");
+		    cm.sendNext("ä½ å·²ç¶“æœ‰é­šé¤Œã€‚");
 		}
 	    } else {
 		cm.sendOk("Please check if you have the required meso or sufficient inventory slot.");

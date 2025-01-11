@@ -15,7 +15,7 @@ function action(mode, type, selection) {
     if (status == 0) {
         request = cm.getNextCarnivalRequest();
         if (request != null) {
-            cm.sendYesNo(request.getChallengeInfo() + "\r\n§A­n¤£­n©M¥L­Ì¹ï¾Ô?");
+            cm.sendYesNo(request.getChallengeInfo() + "\r\nä½ è¦ä¸è¦å’Œä»–å€‘å°æˆ°?");
         } else {
             cm.dispose();
         }

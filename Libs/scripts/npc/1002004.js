@@ -13,7 +13,7 @@ function start() {
 
 function action(mode, type, selection) {
     if (status >= 1 && mode == 0) {
-	cm.sendNext("µ¥§A§ïÅÜ¤ß·N¤F¦b¨Ó§a");
+	cm.sendNext("ç­‰ä½ æ”¹è®Šå¿ƒæ„äº†åœ¨ä¾†å§");
 	cm.dispose();
 	return;
     }
@@ -22,19 +22,19 @@ function action(mode, type, selection) {
     else
 	status--;
     if (status == 0) {
-	cm.sendNext("¶Ù,³o¬O°ß¤@ªºVIP­pµ{¨® ¥u»İ­n10000·¬¹ô §Y¥i¸ü§A«e©¹ \r\n#b¿ÂÃÆÄq§|#k.");
+	cm.sendNext("å—¨,é€™æ˜¯å”¯ä¸€çš„VIPè¨ˆç¨‹è»Š åªéœ€è¦10000æ¥“å¹£ å³å¯è¼‰ä½ å‰å¾€ \r\n#bèèŸ»ç¤¦å‘#k.");
     } else if (status == 1) {
 	var job = cm.getJob();
 	if (job == 0 || job == 2000 || job == 1000) {
-	    cm.sendYesNo("§Ú­Ì¹ï©ó·s¤â¦³90%§é¦© ¥u»İ­n#b1,000 ·¬¹ô#k?");
+	    cm.sendYesNo("æˆ‘å€‘å°æ–¼æ–°æ‰‹æœ‰90%æŠ˜æ‰£ åªéœ€è¦#b1,000 æ¥“å¹£#k?");
 	    cost = 1000;
 	} else {
-	    cm.sendYesNo("§A½T©w­n«e©¹¿ÂÃÆÄq§|? ±N®ø¯Ó#b10,000 ·¬¹ô#k?");
+	    cm.sendYesNo("ä½ ç¢ºå®šè¦å‰å¾€èèŸ»ç¤¦å‘? å°‡æ¶ˆè€—#b10,000 æ¥“å¹£#k?");
 	    cost = 10000;
 	}
     } else if (status == 2) {
 	if (cm.getMeso() < cost) {
-	    cm.sendNext("©êºp§Aªº·¬¹ô¤£¨¬")
+	    cm.sendNext("æŠ±æ­‰ä½ çš„æ¥“å¹£ä¸è¶³")
 	} else {
 	    cm.gainMeso(-cost);
 	    cm.warp(105070001, 0);

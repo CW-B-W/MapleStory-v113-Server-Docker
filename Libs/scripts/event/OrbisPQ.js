@@ -161,7 +161,7 @@ function playerDisconnected(eim, player) {
 
 function monsterValue(eim, mobId) {
     if (mobId == 9300049 && em.getProperty("stage7").equals("0")) { //dark nep
-		eim.broadcastPlayerMsg(6, "ºëÆF·İ·İ¥X²{¤F");
+		eim.broadcastPlayerMsg(6, "ç²¾éˆçˆºçˆºå‡ºç¾äº†");
 		var mob = em.getMonster(9300039);
 		eim.registerMonster(mob);
 		em.setProperty("stage7", "0");
@@ -169,7 +169,7 @@ function monsterValue(eim, mobId) {
     } else if (mobId == 9300040) {
 		var st = parseInt(em.getProperty("stage2"));
 		if (st < 14) {
-	     eim.broadcastPlayerMsg(6, "»·¥jºëÆF¥X²{¤F");
+	     eim.broadcastPlayerMsg(6, "é å¤ç²¾éˆå‡ºç¾äº†");
 	     var mob = em.getMonster(9300040);
 	     em.setProperty("stage2", st+1);
 	     eim.registerMonster(mob);

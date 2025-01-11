@@ -3,7 +3,7 @@ Bell - KC/NLC Subway Station(103000100/600010001), Waiting Room(600010002/600010
  */
 
 var section;
-var msg = new Array("·s¸­«°", "¼Z¸¨«°¥«", "¼Z¸¨«°¥«¦aÅK¯¸", "·s¸­«°");
+var msg = new Array("æ–°è‘‰åŸ", "å¢®è½åŸå¸‚", "å¢®è½åŸå¸‚åœ°éµç«™", "æ–°è‘‰åŸ");
 var ticket = new Array(4031711, 4031713);
 var cost = 5000;
 var returnMap = new Array(103000100, 600010001);
@@ -38,18 +38,18 @@ function action(mode, type, selection) {
 				section = 3;
 				break;
 			default:
-				cm.sendNext("¿ù»~~");
+				cm.sendNext("éŒ¯èª¤~");
 				cm.dispose();
 				break;
 			}
 			if (section < 2) {
-				cm.sendSimple("¶Ù §A­n¶R²¼·f¦aÅK¶Ü?\r\n#L0##b" + msg[section] + "#l");
+				cm.sendSimple("å—¨ ä½ è¦è²·ç¥¨æ­åœ°éµå—?\r\n#L0##b" + msg[section] + "#l");
 			} else {
-				cm.sendYesNo("§A¬O§_­n¦^¥h " + msg[section] + " ?");
+				cm.sendYesNo("ä½ æ˜¯å¦è¦å›å» " + msg[section] + " ?");
 			}
 		} else if (status == 1) {
 			if (section < 2) {
-				cm.sendYesNo("«e©¹ " + msg[section] + " ªº¦aÅK¨C10¤ÀÄÁ¤@¯Z, »İ­nªá¶O #b" + cost + " ¤¸#k. ½Ğ°İ¬O§_­nÁÊ¶R #b#t" + ticket[section] + "##k?");
+				cm.sendYesNo("å‰å¾€ " + msg[section] + " çš„åœ°éµæ¯10åˆ†é˜ä¸€ç­, éœ€è¦èŠ±è²» #b" + cost + " å…ƒ#k. è«‹å•æ˜¯å¦è¦è³¼è²· #b#t" + ticket[section] + "##k?");
 			} else {
 				section -= 2;
 				cm.warp(returnMap[section]);
@@ -57,7 +57,7 @@ function action(mode, type, selection) {
 			}
 		} else if (status == 2) {
 			if (cm.getMeso() < cost || !cm.canHold(ticket[section])) {
-				cm.sendNext("¨­¤W¦Ü¤Ö»İ­n #b" + cost + " ·¬¹ô#k, ©Î¬O¨­¤WÀË¬d­I¥]ªÅ¦ì¬O§_¨¬°÷.");
+				cm.sendNext("èº«ä¸Šè‡³å°‘éœ€è¦ #b" + cost + " æ¥“å¹£#k, æˆ–æ˜¯èº«ä¸Šæª¢æŸ¥èƒŒåŒ…ç©ºä½æ˜¯å¦è¶³å¤ .");
 			} else {
 				cm.gainItem(ticket[section], 1);
 				cm.gainMeso(-cost);

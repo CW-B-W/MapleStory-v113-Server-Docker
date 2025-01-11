@@ -6,7 +6,7 @@ function act() {
 		em.setProperty("stage", parseInt(em.getProperty("stage")) + 1);
 		react.forceHitReactor(react.getState() + 1);
 		if (em.getProperty("stage").equals("6")) {
-			rm.mapMessage(6, "¶}©l«OÅ@¤ë¨ß!!!");
+			rm.mapMessage(6, "é–‹å§‹ä¿è­·æœˆå…”!!!");
 			rm.getMap().setSpawns(true);
 			rm.getMap().respawn(true);
 			rm.getMap().spawnMonsterOnGroundBelow(em.getMonster(9300061), new java.awt.Point(-183, -433));

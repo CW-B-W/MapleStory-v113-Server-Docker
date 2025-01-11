@@ -13,7 +13,7 @@ var status = -1;
 var eQuestChoices = new Array (1302064,1312032,1322054,1332055,1332056,1372034,1382039,1402039,1412027,1422029,1432040,1442051,
 								1452045,1462040,1472055,
 								1092045,1092046,1092047,
-						//ÀY²¯¶}©l
+						//é ­ç›”é–‹å§‹
 						1002508,1002509,1002510,1002511
 
 						); 
@@ -36,11 +36,11 @@ var requiredItemArr = new Array(
 					[1452022,4001126],
 					[1462019,4001126],
 					[1472030,4001126],
-					//¬ŞµP¶}©l
+					//ç›¾ç‰Œé–‹å§‹
 					[1092030,4001126],
 					[1092030,4001126],
 					[1092030,4001126],
-					//ÀY²¯¶}©l
+					//é ­ç›”é–‹å§‹
 					[4001126],
 					[4001126,1002508],
 					[4001126,1002509],
@@ -62,20 +62,20 @@ var requiredItemNumArr = new Array(
 					[1,2000],
 					[1,2000],
 					[1,2000],
-					//¬ŞµP¶}©l
+					//ç›¾ç‰Œé–‹å§‹
 					[1,2000],
 					[1,2000],
 					[1,2000],
-					//·¬¸­ÀY²¯
+					//æ¥“è‘‰é ­ç›”
 					[100],
 					[200,1],
 					[300,1],
 					[400,1]
 					);
 var requiredMoneyArr = new Array(50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000
-						//¬ŞµP¶}©l
+						//ç›¾ç‰Œé–‹å§‹
 						,500000,500000,500000
-						//ÀY²¯¶}©l
+						//é ­ç›”é–‹å§‹
 						,500,5000,50000,500000
 
 								);
@@ -98,7 +98,7 @@ var itemSet;
 
 function action(mode, type, selection) {
 	if (status == 2 && mode != 1 ) {
-		cm.sendOk("¦n¦n¼y¯¬§a!¦³°İÃDÅwªïÀH®É§ä§Ú¡ã");
+		cm.sendOk("å¥½å¥½æ…¶ç¥å§!æœ‰å•é¡Œæ­¡è¿éš¨æ™‚æ‰¾æˆ‘âˆ¼");
 		cm.safeDispose();
 		return;
 	}
@@ -109,7 +109,7 @@ function action(mode, type, selection) {
 		cm.sendSimple(eQuestChoice);
     } else if (status == 1){
 		if(selection == 23){
-			cm.sendYesNo("§A½T©w­n§I´«#b¶g¦~¼y¨÷¶b#k¶Ü?\r\n»İ­n#b#v4001126##t4001126#300­Ó#k\r\n" );
+			cm.sendYesNo("ä½ ç¢ºå®šè¦å…Œæ›#bé€±å¹´æ…¶å·è»¸#kå—?\r\néœ€è¦#b#v4001126##t4001126#300å€‹#k\r\n" );
 			status++;
 		}else{
 			requiredItem = requiredItemArr[selection];
@@ -121,41 +121,41 @@ function action(mode, type, selection) {
 		}
 		lastSelection = selection;
 	}else if(status == 2){	
-		cm.sendYesNo("§A½T©w§A­n»s§@#b#v"+ reward + "##t" + reward +"##k¶Ü?\r\n" );
+		cm.sendYesNo("ä½ ç¢ºå®šä½ è¦è£½ä½œ#b#v"+ reward + "##t" + reward +"##kå—?\r\n" );
     }else if(status == 3){
 		if(lastSelection == 23){
 			itemSet = (Math.floor(Math.random() * Allscroll.length));
 			reward = Allscroll[itemSet];
 			if(!cm.haveItem(4001126,300)){
-					cm.sendOk("§Aªº·¬¸­¤£°÷\r\n" );
+					cm.sendOk("ä½ çš„æ¥“è‘‰ä¸å¤ \r\n" );
 					cm.dispose();
 					return ;
 			}
 			if(!cm.canHold(reward)){
-				cm.sendOk("§Aªºª««~Äæ¤w¸gº¡¤F¡I\r\n" );
+				cm.sendOk("ä½ çš„ç‰©å“æ¬„å·²ç¶“æ»¿äº†ï¼\r\n" );
 				cm.dispose();
 				return ;
 			}
 			cm.gainItem(4001126,-300);
 			cm.gainItem(reward,1);
-			cm.sendOk("§Æ±æ±z¶}¤ß¡I\r\n" );
+			cm.sendOk("å¸Œæœ›æ‚¨é–‹å¿ƒï¼\r\n" );
 			cm.dispose();
 			
 		}else{
 			for(var i = 0 ; i < requiredItem.length ; i++){
 				if(!cm.haveItem(requiredItem[i],requiredItemNum[i])){
-					cm.sendOk("ÁÙ¨S¦¬¶°§¹¦¨¶Ü¡H\r\n" );
+					cm.sendOk("é‚„æ²’æ”¶é›†å®Œæˆå—ï¼Ÿ\r\n" );
 					cm.dispose();
 					return ;
 				}
 			}
 			if(cm.getMeso() < remoney){
-				cm.sendOk("§Aªº¿ú¤£°÷¡I\r\n" );
+				cm.sendOk("ä½ çš„éŒ¢ä¸å¤ ï¼\r\n" );
 				cm.dispose();
 				return ;
 			}
 			if(!cm.canHold(reward)){
-				cm.sendOk("§Aªºª««~Äæ¤w¸gº¡¤F¡I\r\n" );
+				cm.sendOk("ä½ çš„ç‰©å“æ¬„å·²ç¶“æ»¿äº†ï¼\r\n" );
 				cm.dispose();
 				return ;
 			}
@@ -164,25 +164,25 @@ function action(mode, type, selection) {
 				cm.gainItem(requiredItem[i] , -requiredItemNum[i]);
 			}
 			cm.gainItem(reward,1,true);
-			cm.sendOk("§¹¦¨Åo¡IÄ~ÄòªY½à¬üÄRªº·¬¸­§a¡I\r\n" );
+			cm.sendOk("å®Œæˆå›‰ï¼ç¹¼çºŒæ¬£è³ç¾éº—çš„æ¥“è‘‰å§ï¼\r\n" );
 			cm.dispose();
 		}
 	}
 }
 
 function makeChoices(a){
-    var result  = "³o­Ó¥@¬É¥Rº¡¤F¬üÄRªº#b#v4001126##t4001126##k\r\n­Y¬O§A¦¬¶°¤F¨¬°÷ªº#b#v4001126##t4001126##k¡AÁÙ¥i¥H©M§Ú¥æ´«Â§ª«©O!\r\n";
+    var result  = "é€™å€‹ä¸–ç•Œå……æ»¿äº†ç¾éº—çš„#b#v4001126##t4001126##k\r\nè‹¥æ˜¯ä½ æ”¶é›†äº†è¶³å¤ çš„#b#v4001126##t4001126##kï¼Œé‚„å¯ä»¥å’Œæˆ‘äº¤æ›ç¦®ç‰©å‘¢!\r\n";
     for (var x = 0; x< a.length; x++){
 		result += " #L" + x + "##v" + a[x] + "##t" + a[x] + "##l\r\n";
     }
-	result += "#L23##b§Ú·Q§I´«¶g¦~¼y¨÷¶b...#k#l\r\n";
+	result += "#L23##bæˆ‘æƒ³å…Œæ›é€±å¹´æ…¶å·è»¸...#k#l\r\n";
     return result;
 }
 
 function makeRequire(a,b,re,m){
-    var result  = "ª`·N¡I°µ¥X¨Óªºª««~#b¯À½è³£¬OÀH¾÷#kªº­ò~\r\n»s§@#b#v"+re+"##t"+re+"##k»İ­n¥H¤Uª««~¡G\r\n\r\n";
+    var result  = "æ³¨æ„ï¼åšå‡ºä¾†çš„ç‰©å“#bç´ è³ªéƒ½æ˜¯éš¨æ©Ÿ#kçš„å”·~\r\nè£½ä½œ#b#v"+re+"##t"+re+"##kéœ€è¦ä»¥ä¸‹ç‰©å“ï¼š\r\n\r\n";
     for (var x = 0; x< a.length; x++){
-		result += "#v" + a[x] + "##t" + a[x] + "# " + b[x]+ "­Ó#l\r\n";
+		result += "#v" + a[x] + "##t" + a[x] + "# " + b[x]+ "å€‹#l\r\n";
     }
 	result +="#fUI/UIWindow.img/QuestIcon/7/0##b"+m+"#k\r\n";
     return result;
