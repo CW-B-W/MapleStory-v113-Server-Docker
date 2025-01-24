@@ -25,6 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import server.MapleCarnivalFactory;
 import server.MapleCarnivalFactory.MCSkill;
+import server.ServerProperties;
 import server.maps.MapleMap;
 import server.maps.MapleReactor;
 import tools.MaplePacketCreator;
@@ -39,6 +40,7 @@ public class SpawnPoint extends Spawns {
     private boolean immobile;
     private String msg;
     private byte carnivalTeam;
+    private int spawnCount = 1;
 
     public SpawnPoint(final MapleMonster monster, final Point pos, final int mobTime, final byte carnivalTeam, final String msg) {
         this.monster = monster;
@@ -48,6 +50,7 @@ public class SpawnPoint extends Spawns {
         this.msg = msg;
         this.immobile = !monster.getStats().getMobile();
         this.nextPossibleSpawn = System.currentTimeMillis();
+        this.spawnCount = Integer.parseInt(ServerProperties.getProperty("tms.SpawnCount", "1"));
     }
 
     public final void setCarnival(int c) {
@@ -81,7 +84,7 @@ public class SpawnPoint extends Spawns {
         }
         // regular spawnpoints should spawn a maximum of 3 monsters; immobile spawnpoints or spawnpoints with mobtime a
         // maximum of 1
-        if (((mobTime != 0 || immobile) && spawnedMonsters.get() > 0) || spawnedMonsters.get() > 1) {
+        if (((mobTime != 0 || immobile) && spawnedMonsters.get() > (spawnCount-1)) || spawnedMonsters.get() > spawnCount) {
             return false;
         }
         return nextPossibleSpawn <= System.currentTimeMillis();
