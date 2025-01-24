@@ -20,13 +20,6 @@ COPY --from=builder /app/dist/lib /app/dist/lib
 # Install MySQL client
 RUN apt-get update && apt-get install -y default-mysql-client && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8484
-EXPOSE 8585
-EXPOSE 8586
-EXPOSE 8587
-# CashShop is on 8596
-EXPOSE 8596
-
 # start_tms_server.sh will be later replaced by mounted file
 COPY start_tms_server.sh /app/start_tms_server.sh
 RUN chmod +x /app/start_tms_server.sh

@@ -44,13 +44,18 @@ public class AutobanManager implements Runnable {
     private static final int AUTOBAN_POINTS = 5000;
     private static AutobanManager instance = new AutobanManager();
     private final ReentrantLock lock = new ReentrantLock(true);
+    private static final boolean autobanEnable;
+    
+    static {
+        autobanEnable = Boolean.parseBoolean(ServerProperties.getProperty("tms.autoban", "true"));
+    }
 
     public static final AutobanManager getInstance() {
         return instance;
     }
 
     public final void autoban(final MapleClient c, final String reason) {
-        if (c.getPlayer().isGM() || c.getPlayer().isClone()) {
+        if (autobanEnable == false || c.getPlayer().isGM() || c.getPlayer().isClone()) {
             c.getPlayer().dropMessage(5, "[WARNING] A/b triggled : " + reason);
             return;
         }

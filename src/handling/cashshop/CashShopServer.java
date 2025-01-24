@@ -35,11 +35,12 @@ public class CashShopServer {
     private static ServerConnection init;
     private static String ip;
     private static InetSocketAddress InetSocketadd;
-    private final static int PORT = 8596;
+    private static int PORT = 8605;
     private static PlayerStorage players, playersMTS;
     private static boolean finishedShutdown = false;
 
     public static final void run_startup_configurations() {
+        PORT = Integer.parseInt(ServerProperties.getProperty("tms.CPort" , "8605"));
         ip = ServerProperties.getProperty("tms.IP") + ":" + PORT;
 
 

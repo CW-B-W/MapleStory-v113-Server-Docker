@@ -41,6 +41,7 @@ import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
 import server.PortalFactory;
+import server.ServerProperties;
 import server.life.AbstractLoadedMapleLife;
 import server.life.MapleLifeFactory;
 import server.life.MapleMonster;
@@ -58,6 +59,11 @@ public class MapleMapFactory {
     private static final Map<Integer, MapleNodes> mapInfos = new HashMap<Integer, MapleNodes>();
     private final ReentrantLock lock = new ReentrantLock(true);
     private int channel;
+    private static final float monsterRateScale;
+    
+    static {
+        monsterRateScale = Float.parseFloat(ServerProperties.getProperty("tms.monster", "1.0"));
+    }
 
     public final MapleMap getMap(final int mapid) {
         return getMap(mapid, true, true, true);
@@ -89,7 +95,7 @@ public class MapleMapFactory {
                 if (respawns) {
                     MapleData mobRate = mapData.getChildByPath("info/mobRate");
                     if (mobRate != null) {
-                        monsterRate = ((Float) mobRate.getData()).floatValue();
+                        monsterRate = monsterRateScale * ((Float) mobRate.getData()).floatValue();
                     }
                 }
                 map = new MapleMap(mapid, channel, MapleDataTool.getInt("info/returnMap", mapData), monsterRate);
@@ -271,7 +277,7 @@ public class MapleMapFactory {
         if (respawns) {
             MapleData mobRate = mapData.getChildByPath("info/mobRate");
             if (mobRate != null) {
-                monsterRate = ((Float) mobRate.getData()).floatValue();
+                monsterRate = monsterRateScale * ((Float) mobRate.getData()).floatValue();
             }
         }
         MapleMap map = new MapleMap(mapid, channel, MapleDataTool.getInt("info/returnMap", mapData), monsterRate);

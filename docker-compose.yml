@@ -18,11 +18,11 @@ services:
       mysql:
         condition: service_healthy
     ports:
-        - 8484:8484
-        - 8585:8585
-        - 8586:8586
-        - 8587:8587
-        - 8596:8596
+        - 8484:8484 # Login Port
+        - 8585:8585 # Channel 1 Port
+        - 8586:8586 # Channel 2 Port
+        - 8587:8587 # Channel 3 Port
+        - 8605:8605 # CashShop Port
 
   mysql:
     image: mariadb:10.5 # Use MariaDB 10.5 to support native MySQL authentication
