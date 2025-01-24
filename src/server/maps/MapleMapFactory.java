@@ -60,9 +60,11 @@ public class MapleMapFactory {
     private final ReentrantLock lock = new ReentrantLock(true);
     private int channel;
     private static final float monsterRateScale;
+    private static final float mobSpawnIntervalScale;
     
     static {
         monsterRateScale = Float.parseFloat(ServerProperties.getProperty("tms.Monster", "1.0"));
+        mobSpawnIntervalScale = Float.parseFloat(ServerProperties.getProperty("tms.MobInterval", "1.0"));
     }
 
     public final MapleMap getMap(final int mapid) {
@@ -197,7 +199,7 @@ public class MapleMapFactory {
                     }
                 }
                 addAreaBossSpawn(map);
-                map.setCreateMobInterval((short) MapleDataTool.getInt(mapData.getChildByPath("info/createMobInterval"), 9000));
+                map.setCreateMobInterval((short) (mobSpawnIntervalScale * MapleDataTool.getInt(mapData.getChildByPath("info/createMobInterval"), 9000)));
                 map.loadMonsterRate(true);
                 map.setNodes(loadNodes(mapid, mapData));
 
@@ -349,7 +351,7 @@ public class MapleMapFactory {
             }
         }
         addAreaBossSpawn(map);
-        map.setCreateMobInterval((short) MapleDataTool.getInt(mapData.getChildByPath("info/createMobInterval"), 9000));
+        map.setCreateMobInterval((short) (mobSpawnIntervalScale * MapleDataTool.getInt(mapData.getChildByPath("info/createMobInterval"), 9000)));
         map.loadMonsterRate(true);
         map.setNodes(loadNodes(mapid, mapData));
 
