@@ -47,7 +47,7 @@ public class AutobanManager implements Runnable {
     private static final boolean autobanEnable;
     
     static {
-        autobanEnable = Boolean.parseBoolean(ServerProperties.getProperty("tms.autoban", "true"));
+        autobanEnable = Boolean.parseBoolean(ServerProperties.getProperty("tms.AutoBan", "true"));
     }
 
     public static final AutobanManager getInstance() {
