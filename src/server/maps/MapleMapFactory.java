@@ -62,7 +62,7 @@ public class MapleMapFactory {
     private static final float monsterRateScale;
     
     static {
-        monsterRateScale = Float.parseFloat(ServerProperties.getProperty("tms.monster", "1.0"));
+        monsterRateScale = Float.parseFloat(ServerProperties.getProperty("tms.Monster", "1.0"));
     }
 
     public final MapleMap getMap(final int mapid) {
