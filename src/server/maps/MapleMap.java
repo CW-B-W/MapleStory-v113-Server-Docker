@@ -2492,9 +2492,10 @@ public final class MapleMap {
         maxRegularSpawn = Math.round(spawnSize * monsterRate);
         if (maxRegularSpawn < 2) {
             maxRegularSpawn = 2;
-        } else if (maxRegularSpawn > spawnSize) {
-            maxRegularSpawn = spawnSize - (spawnSize / 15);
         }
+        // else if (maxRegularSpawn > spawnSize) {
+        //     maxRegularSpawn = spawnSize - (spawnSize / 15);
+        // }
         if (fixedMob > 0) {
             maxRegularSpawn = fixedMob;
         }
