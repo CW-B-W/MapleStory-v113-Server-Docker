@@ -42,7 +42,7 @@ start_services() {
 
     # Start containers and log output in a subshell
     # This is to prevent the docker compose command from being killed when the script exits
-    ( docker compose up $UP_OPTION > "${log_dir}/startup.log" 2>&1 ) &
+    ( setsid docker compose up $UP_OPTION > "${log_dir}/startup.log" 2>&1 ) &
     local compose_pid=$!
     echo $compose_pid > "${log_dir}/compose.pid"
 
