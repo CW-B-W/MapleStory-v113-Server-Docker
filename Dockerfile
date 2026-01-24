@@ -10,7 +10,7 @@ RUN gradle buildAndCopy
 
 # ================================
 
-FROM openjdk:8-jdk-slim
+FROM eclipse-temurin:8-jdk
 
 WORKDIR /app
 
